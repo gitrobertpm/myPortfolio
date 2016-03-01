@@ -12,6 +12,7 @@ var height = window.innerHeight;
 
 // NAV VARIABLES
 var navBar = document.getElementsByClassName("navBar")[0];
+var body = document.getElementsByTagName("body")[0];
 var nav = document.getElementsByTagName("nav")[0];
 var burgerWrap = document.getElementsByClassName("burgerWrap")[0];
 var burgerPattyClose = document.getElementsByClassName("burgerPattyClose")[0];
@@ -21,6 +22,7 @@ var backToTop = document.getElementsByClassName("backToTop");
 
 var header = document.getElementsByTagName("header")[0];
 var mainWrap = document.getElementsByClassName("mainWrap")[0];
+var footer = document.getElementsByTagName("footer")[0];
 
 // BOOLEAN TO TRACK NAV OPEN STATE
 var navOpen = false;
@@ -41,14 +43,18 @@ NAV
 		// OPEN AND CLOSE NAV
 		burgerWrap.onclick = function() {
 			if (!navOpen) {
+				body.style.overflow = "hidden";
 				nav.classList.toggle("openNav", true);
 				burgerPattyClose.style.display = "block";
+				blerHelper(navBar, footer, 1.5);
 				blerHelper(header, mainWrap, 3);
 				navOpen = true;
 			} else if (navOpen) {
+				body.style.overflow = "auto";
 				nav.classList.toggle("openNav", false);
 				burgerPattyClose.style.display = "none";
 				blerHelper(header, mainWrap, 0);
+				blerHelper(navBar, footer, 0);
 				navOpen = false;
 			}
 		}
@@ -101,24 +107,32 @@ var stickyNav = function() {
 			return;
 			
 		} else if (navigator.userAgent.indexOf("Firefox") > 0) {
-			navBar.style.top = distance + "px";
-			burgerWrap.style.marginTop = (distance += 10) + "px";
 			
+			if (!navOpen) {
+				navBar.style.top = distance + "px";
+			}	
 		} else if (navigator.userAgent.indexOf("Chrome") > 0) {
-			navBar.style.top = distance2 + "px";
-			burgerWrap.style.marginTop = (distance2 += 10) + "px";
-		} 
-		
-		navBar.style.zIndex = "999999";
-		siteMapWrap.style.zIndex = "-1";
+			
+			if (!navOpen) {
+				navBar.style.top = distance2 + "px";
+			}
+		}
 		backToTop[0].style.background = "rgb(30,145,255)";
 		backToTop[1].style.background = "rgb(30,145,255)";
 		
 	} else {
+		if (!navOpen) {
+			nav.style.top = "2px";
+		} else {
+			if (width < 750) {
+				nav.style.top = "0px";
+			} else {
+				nav.style.top = "50px";
+			}
+			
+		}
 		navBar.style.top = "0";
-		navBar.style.zIndex = "99";
-		burgerWrap.style.marginTop = "auto";
-		siteMapWrap.style.zIndex = "9";
+
 		backToTop[0].style.background = "rgb(245,245,245)";
 		backToTop[1].style.background = "rgb(245,245,245)";
 	}

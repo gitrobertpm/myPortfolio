@@ -72,6 +72,7 @@
 	.mainWrap {
 		padding-top: 40px;
 		padding-left: 35px;
+		padding-right: 35px;
 	}
 	/*** END MAIN WRAP ***************************************/
 
@@ -105,8 +106,61 @@
 	/*********************************************************
 	 NAV 750px
 	**********************************************************/
+	nav {
+		/* position: absolute;
+		top: 2px;
+		right: auto;
+		bottom: auto;
+		left: 10px;
+		margin-left: auto;
+		text-align: center;
+		width: 45px;
+		max-width: 1200px;
+		height: 40px;
+		overflow: hidden;
+		z-index: 999; */
+		-webkit-transition: left .35s,
+				   margin-left .35s,
+				   width .75s ease-out, 
+				   height 1s ease-out .35s,
+				   overflow .3s ease-out 1s;
+		transition: left .35s,
+				   margin-left .35s,
+				   width .75s ease-out, 
+				   height 1s ease-out .35s,
+				   overflow .3s ease-out 1s;
+	}
+	
+	.openNav {
+		/* width: 100%;
+		height: 100%; */
+		top: 50px;
+		/* left: 0;
+		overflow: auto; */
+	}
+	
+	.burgerWrap {
+		/* margin-top: 50px; */
+	}
+	
+	/* .burgerPattyClose {
+		display: none;
+		margin: -25px auto auto;
+		margin-left: -15px;
+		box-shadow: 10px 10px 10px rgba(25,25,25,0.9);
+	} */
+	
 	.siteMapWrap {
+		top: 50px !important;
+		left: 50%;
+		width: 90%;
+		max-width: 1100px;
 		padding: 35px;
+		margin: 15px auto;
+		margin-left: -45%;
+		border-radius: 2px;
+		border: 2px solid rgb(245,25,25);
+		box-shadow: 15px 15px 10px rgba(25,25,25,0.9), 3px 3px 3px rgba(50,50,50,0.5) inset, -3px -3px 3px rgba(50,50,50,0.3) inset;
 	}
 	/*** END NAV *********************************************/
 	
@@ -115,6 +169,10 @@
 	/*********************************************************
 	 HEADER 750px
 	**********************************************************/
+	header {
+		background-size:cover;
+	}
+	
 	.myLogo {
 		width: 7.5vw;
 		max-width: 6em;

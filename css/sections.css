@@ -1,0 +1,138 @@
+.portfolioSection {
+	text-align: center;
+	width: auto;
+	
+	margin:auto auto 45px;
+	/* background: rgb(200,200,200); */
+	border-radius: 3px;
+	border: 1px solid rgba(200,200,200,0.5);
+	box-shadow: 5px 5px 5px rgba(100,100,100,0.5);
+}
+
+.ps1 {
+	max-width: 275px;
+}
+
+.ps2 {
+	max-width: 350px;
+}
+
+.psBorder {
+	border-radius: 3px;
+	/* border: 10px solid rgb(100,181,246); */
+	border: 10px solid rgb(245,245,245);
+	
+}
+
+.psInnerWrap {
+	border-radius: 3px;
+	box-shadow: 3px 3px 3px rgba(245,245,254,0.5) inset, -5px -5px 5px rgba(50,50,50,0.7) inset;
+}
+
+.psInnerWrap1 {
+	background: url("../img/bg/blur1.jpg") no-repeat 50% 50%;
+	background-size: 250% auto;
+}
+
+.psInnerWrap2 {
+	background: url("../img/bg/myTreehouseProjBG.jpg") no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.psTitleWrap {
+	padding-top: 20px;
+	padding-bottom: 10px;
+	-webkit-transition: .25s ease-out;transition: .25s ease-out;
+}
+
+.psTitleWrap h2 {
+	font-size: 2.5em;
+	line-height: 1.1em;
+	color: rgb(245,245,245);
+	text-shadow: 1px 1px 0px rgb(50,50,50);
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#meTitle {
+	max-width: 100px;
+	-webkit-transition: .25s ease-out;transition: .25s ease-out;
+	/* animation: fill 2s ease-out forwards; */
+}
+
+.psContentWrap {
+	padding-bottom: 25px;
+}
+
+.psImgWrap img {
+	margin: 10px auto;
+}
+
+.psImgWrap img {
+	width: 75px;
+	height: 75px;
+	margin: 10px auto;
+	border-radius: 50%;
+	border: 1px solid rgba(200,200,200,0.5);
+	filter: drop-shadow(2px 2px 3px rgba(25,25,25,0.5));
+}
+
+.psInfoReveal {
+	display: none;
+}
+
+
+.CheckItOutBtn {
+	color: rgb(245,245,245);
+	background: rgb(255,60,0);
+}
+
+.CheckItOutBtn:hover {
+	color: rgb(75,175,255);
+}
+
+.mePath {
+	fill: rgb(245,245,245);
+}
+
+@media screen and (min-width: 600px) {
+	/* .mePath {
+		
+	} */
+	
+	.psInnerWrap1:hover > .psTitleWrap1 > #meTitle > .mePath {
+		fill: transparent ;
+		stroke-dasharray: 600;
+		stroke-dashoffset: 600;
+		-webkit-transition: .25s ease-out;transition: .25s ease-out;
+		-webkit-animation: doThatLineThing 2s ease-out forwards,fill 1.5s ease-out 1s forwards;
+		animation: doThatLineThing 2s ease-out forwards,fill 1s ease-out 1.5s forwards;
+	}
+
+	@-webkit-keyframes doThatLineThing {
+		100% {
+			stroke-dashoffset: 0;
+		}
+	}
+	@keyframes doThatLineThing {
+		100% {
+			stroke-dashoffset: 0;
+		}
+	}
+
+	@-webkit-keyframes fill {
+		100% {
+			fill: rgb(245,245,245);
+		}
+	}
+	@keyframes fill {
+		100% {
+			fill: rgb(245,245,245);
+		}
+	}
+
+
+	.psTitleWrap:hover > #meTitle > .mePath {
+		/* fill: rgb(255,100,0) !important; */
+	}
+}
