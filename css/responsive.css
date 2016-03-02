@@ -479,6 +479,29 @@
 		margin-top: -250px;
 		float: left;
 	}
+	
+	.ps3 {
+		max-width: 325px;
+		margin-top: -250px;
+		float: right;
+	}
+	
+	.ps4 {
+		max-width: 275px;
+		clear: both;
+	}
+	
+	.ps5 {
+		max-width: 325px;
+		margin-top: -250px;
+		float: left;
+	}
+	
+	.ps6 {
+		max-width: 325px;
+		margin-top: -250px;
+		float: right;
+	}
 	/*** END MAIN WRAP ***************************************/
 
 	

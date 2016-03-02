@@ -279,7 +279,7 @@ nav p {
 .navBarList li {
 	display: inline-block;
 	font-size: .88em;
-	padding-left: 11px;
+	padding-left: 15px;
 }
 
 
@@ -287,8 +287,22 @@ nav p {
 	color: rgb(245,245,245);
 }
 
-.navBarList li a:active, .navBarList li  a:focus, .navBarList li  a:hover {
+.navBarList li a:active, .navBarList li a:focus, .navBarList li a:hover {
 	color: rgb(30,145,255);
+}
+
+.navBarList li a svg {
+	width: 35px;
+	height: 30px;
+	-webkit-transition: .25s ease-out;transition: .25s ease-out;
+}
+
+.navBarList li a svg .siteMapSvgPath {
+	-webkit-transition: .25s ease-out;transition: .25s ease-out;
+}
+
+.navBarList li a svg:active > .siteMapSvgPath, .navBarList li a svg:focus > .siteMapSvgPath, .navBarList li a svg:hover > .siteMapSvgPath {
+	stroke: rgb(30,145,255) !important;
 }
 
 .backToTopWrap {
@@ -300,7 +314,7 @@ nav p {
 	vertical-align: top;
 	width: 20px;
 	height: 5px;
-	margin-top: 7px;
+	margin-top: -5px;
 	background: rgb(245,245,245);
 	border-radius: 5px;
 	-webkit-transition: .25s ease-out;transition: .25s ease-out;
