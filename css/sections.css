@@ -9,14 +9,6 @@
 	box-shadow: 5px 5px 5px rgba(100,100,100,0.5);
 }
 
-.ps1 {
-	max-width: 275px;
-}
-
-.ps2 {
-	max-width: 350px;
-}
-
 .psBorder {
 	border-radius: 3px;
 	/* border: 10px solid rgb(100,181,246); */
@@ -41,12 +33,14 @@
 
 .psTitleWrap {
 	padding-top: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
 	padding-bottom: 10px;
 	-webkit-transition: .25s ease-out;transition: .25s ease-out;
 }
 
 .psTitleWrap h2 {
-	font-size: 2.5em;
+	font-size: 2.25em;
 	line-height: 1.1em;
 	color: rgb(245,245,245);
 	text-shadow: 1px 1px 0px rgb(50,50,50);
@@ -58,6 +52,10 @@
 	max-width: 100px;
 	-webkit-transition: .25s ease-out;transition: .25s ease-out;
 	/* animation: fill 2s ease-out forwards; */
+}
+
+.psTitle2 {
+	
 }
 
 .psContentWrap {

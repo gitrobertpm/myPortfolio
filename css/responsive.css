@@ -38,7 +38,7 @@
 		left: 30px;
 	}
 	
-	.navList_2 {
+	.navBarList {
 		margin-right: 25px;
 	}
 	/*** END NAV *********************************************/
@@ -135,6 +135,7 @@
 		/* width: 100%;
 		height: 100%; */
 		top: 50px;
+		overflow: hidden; 
 		/* left: 0;
 		overflow: auto; */
 	}
@@ -161,6 +162,226 @@
 		border-radius: 2px;
 		border: 2px solid rgb(245,25,25);
 		box-shadow: 15px 15px 10px rgba(25,25,25,0.9), 3px 3px 3px rgba(50,50,50,0.5) inset, -3px -3px 3px rgba(50,50,50,0.3) inset;
+	}
+	
+	.siteMapList li {
+		/* font-size: .88em; */
+		max-width: 150px;
+		max-height: 150px;
+	}
+
+	.siteMapList li a {
+		/* display: block;
+		width: 100%;
+		height: 100%;
+		max-width: 200px; */
+		margin: auto;
+		/* color: rgb(150,150,150); */
+	}
+	
+	.siteMapList li a:active, .siteMapList li a:focus, .siteMapList li a:hover {
+		color: rgb(255,60,0);
+	}
+	
+	.siteMapList svg {
+		width: 125px;
+		height: 105px;
+	}
+	
+	.siteMapSvgPath {
+		/* stroke-dasharray: 550;
+		stroke-dashoffset: 550; */
+		-webkit-transition: .25s ease-out;transition: .25s ease-out;
+		-webkit-transition: transform 1s ease-out .75s;transition: transform 1s ease-out .75s;
+	}
+	
+	/* .siteMapSvgPath {
+		-webkit-animation: offsetNav 10s ease-out .5s forwards;animation: offsetNav 10s ease-out .5s forwards;
+	} */
+	
+	.siteMapListItem:nth-of-type(1) a:hover > .siteMapSVG > .siteMapSvgPath {
+		stroke-dasharray: 275;
+		stroke-dashoffset: 275;
+	}
+	
+	/* #meIconXML .siteMapSvgPath {
+		stroke-dasharray: 275;
+		stroke-dashoffset: 275;
+	} */
+	
+	
+	
+	.siteMapListItem:nth-of-type(2) a:hover > .siteMapSVG > .siteMapSvgPath {
+		stroke-dasharray: 550;
+		stroke-dashoffset: 550;
+	}
+	
+	#treehouseIconXML {
+		/* height: 45px; */
+		/* margin-bottom: 5px; */
+		/* width: auto; */
+	}
+	
+	/* #treehouseIconXML .siteMapSvgPath {
+		stroke-dasharray: 550;
+		stroke-dashoffset: 550;
+	} */
+	
+	
+	
+	.siteMapListItem:nth-of-type(3) a:hover > .siteMapSVG > .siteMapSvgPath {
+		stroke-dasharray: 160;
+		stroke-dashoffset: 160;
+	}
+	
+	.siteMapListItem:nth-of-type(3) a:hover > .siteMapSVG > .siteMapSvgPath:nth-of-type(1)  {
+		stroke-dasharray: 350;
+		stroke-dashoffset: 350;
+	}
+	
+	#projectsIconXML {
+		/* height: 50px; */
+		/* margin-bottom: 0px; */
+	}
+	
+	/* #projectsIconXML .siteMapSvgPath {
+		stroke-dasharray: 160;
+		stroke-dashoffset: 160;
+	}
+	
+	#projectsIconXML .siteMapSvgPath:nth-of-type(1) {
+		stroke-dasharray: 350;
+		stroke-dashoffset: 350;
+	} */
+	
+	
+	.siteMapListItem:nth-of-type(4) a:hover > .siteMapSVG > .siteMapSvgPath {
+		stroke-dasharray: 50;
+		stroke-dashoffset: 50;
+	}
+	
+	.siteMapListItem:nth-of-type(4) a:hover > .siteMapSVG > .siteMapSvgPath:nth-of-type(n+2),
+	.siteMapListItem:nth-of-type(4) a:hover > .siteMapSVG > .theHead {
+		transform: translate3d(60px,-37px,0px);
+	}
+	
+	.siteMapListItem:nth-of-type(4) a:hover > .siteMapSVG > .siteMapSvgPath:nth-of-type(1)  {
+		stroke-dasharray: 275;
+		stroke-dashoffset: 275;
+	}
+	
+	/* .siteMapListItem:nth-of-type(4) a:hover > .siteMapSVG > .webSlinger {
+		
+	} */
+	
+	
+	.siteMapListItem:nth-of-type(5) a:hover > .siteMapSVG > .siteMapSvgPath  {
+		stroke-dasharray: 200;
+		stroke-dashoffset: 200;
+	}
+	
+	.siteMapListItem:nth-of-type(5) a:hover > .siteMapSVG > .siteMapSvgPath:nth-of-type(2)  {
+		animation-delay: .25s;
+	}
+	
+	.siteMapListItem:nth-of-type(5) a:hover > .siteMapSVG > .siteMapSvgPath:nth-of-type(3)  {
+		animation-delay: .5s;
+	}
+	
+	.siteMapListItem:nth-of-type(5) a:hover > .siteMapSVG > .siteMapSvgPath:nth-of-type(4)  {
+		animation-delay: .75s;
+	}
+	
+	.siteMapListItem:nth-of-type(5) a:hover > .siteMapSVG > .siteMapSvgPath:nth-of-type(5)  {
+		animation-delay: 1.25s;
+	}
+	
+	.siteMapListItem:nth-of-type(5) a:hover > .siteMapSVG > .siteMapSvgPath:nth-of-type(6)  {
+		animation-delay: 1.5s;
+	}
+	
+	.siteMapListItem:nth-of-type(5) a:hover > .siteMapSVG > .siteMapSvgPath:nth-of-type(7)  {
+		animation-delay: 1.75s;
+	}
+	
+	.siteMapListItem:nth-of-type(5) a:hover > .siteMapSVG > .siteMapSvgPath:nth-of-type(8)  {
+		animation-delay: 2s;
+	}
+	
+	
+	.siteMapListItem:nth-of-type(6) a:hover > .siteMapSVG > .siteMapSvgPath  {
+		stroke-dasharray: 235;
+		stroke-dashoffset: 235;
+	}
+	
+	.siteMapListItem:nth-of-type(7) a:hover > .siteMapSVG > .siteMapSvgPath  {
+		stroke-dasharray: 175;
+		stroke-dashoffset: 175;
+	}
+	
+	
+	
+	#webDevJourneyIconXML {
+		/* height: 50px; */
+		/* margin-bottom: 0px; */
+	}
+	
+	
+	.siteMapListItem a:hover > .siteMapSVG > .siteMapSvgPath {
+		stroke: rgb(35,145,255) !important;
+		-webkit-animation: offsetNav 1s ease-out forwards;animation: offsetNav 1s ease-out forwards;
+	}
+	
+	/* .animateSiteMapSvgPath {
+		-webkit-animation: offsetNav 3s ease-out .75s forwards;animation: offsetNav 3s ease-out.75s forwards;
+	} */
+	
+	/* .siteMapListItem:nth-of-type(2) .siteMapSvgPath {
+		stroke-dasharray: 550;
+		stroke-dashoffset: 550;
+		-webkit-animation: offsetNav 3s ease-out 1s forwards;animation: offsetNav 3s ease-out 1s forwards;
+	} */
+	
+	/* .siteMapListItem:nth-of-type(3) .siteMapSvgPath {
+		stroke-dasharray: 250;
+		stroke-dashoffset: 250;
+		-webkit-animation: offsetNav 3s ease-out 1.25s forwards;animation: offsetNav 3s ease-out 1.25s forwards;
+	}
+	
+	.siteMapListItem:nth-of-type(4) .siteMapSvgPath {
+		stroke-dasharray: 550;
+		stroke-dashoffset: 550;
+		-webkit-animation: offsetNav 3s ease-out 1.25s forwards;animation: offsetNav 3s ease-out 1.25s forwards;
+	}
+	
+	.siteMapListItem:nth-of-type(5) .siteMapSvgPath {
+		stroke-dasharray: 950;
+		stroke-dashoffset: 950;
+		-webkit-animation: offsetNav 3s ease-out 1.25s forwards;animation: offsetNav 3s ease-out 1.25s forwards;
+	}
+	
+	.siteMapListItem:nth-of-type(6) .siteMapSvgPath {
+		stroke-dasharray: 400;
+		stroke-dashoffset: 400;
+		-webkit-animation: offsetNav 3s ease-out 1.25s forwards;animation: offsetNav 3s ease-out 1.25s forwards;
+	}
+	
+	.siteMapListItem:nth-of-type(7) .siteMapSvgPath {
+		stroke-dasharray: 550;
+		stroke-dashoffset: 550;
+		-webkit-animation: offsetNav 3s ease-out 1.25s forwards;animation: offsetNav 3s ease-out 1.25s forwards;
+	} */
+
+
+	@-webkit-keyframes offsetNav {
+		100% {
+			stroke-dashoffset: 0;
+		}
+	}
+	@keyframes offsetNav {
+		100% {
+			stroke-dashoffset: 0;
+		}
 	}
 	/*** END NAV *********************************************/
 	
@@ -248,7 +469,16 @@
 	/*********************************************************
 	 MAIN WRAP
 	**********************************************************/
+	.ps1 {
+		max-width: 275px;
+		clear: both;
+	}
 
+	.ps2 {
+		max-width: 325px;
+		margin-top: -250px;
+		float: left;
+	}
 	/*** END MAIN WRAP ***************************************/
 
 	

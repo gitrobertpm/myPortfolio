@@ -20,6 +20,9 @@ var siteMapWrap = document.getElementsByClassName("siteMapWrap")[0];
 var navItem = document.getElementsByClassName("navItem");
 var backToTop = document.getElementsByClassName("backToTop");
 
+var siteMapSVG = document.getElementsByClassName("siteMapSVG");
+var siteMapSvgPath = document.getElementsByClassName("siteMapSvgPath");
+
 var header = document.getElementsByTagName("header")[0];
 var mainWrap = document.getElementsByClassName("mainWrap")[0];
 var footer = document.getElementsByTagName("footer")[0];
@@ -35,6 +38,8 @@ var blerHelper = function(bler1, bler2, blerTot) {
 };
 
 
+
+
 /*===============================================
 NAV
 ================================================*/
@@ -48,6 +53,21 @@ NAV
 				burgerPattyClose.style.display = "block";
 				blerHelper(navBar, footer, 1.5);
 				blerHelper(header, mainWrap, 3);
+				
+				// siteMapSVG[0].querySelector(".siteMapSvgPath").classList.toggle("animateSiteMapSvgPath", true);
+				// siteMapSVG[1].querySelector(".siteMapSvgPath").classList.toggle("animateSiteMapSvgPath", true);
+				
+				
+				// for (var i2 = 0; i2 < siteMapSVG[2].querySelectorAll(".siteMapSvgPath").length; i2++) {
+					// siteMapSVG[2].querySelectorAll(".siteMapSvgPath")[i2].classList.toggle("animateSiteMapSvgPath", true);
+				// }
+				
+				
+				// for (var i = 0; i < siteMapSvgPath.length; i++) {
+					
+					// siteMapSvgPath[1].classList.toggle("animateSiteMapSvgPath1", true);
+				// }
+				
 				navOpen = true;
 			} else if (navOpen) {
 				body.style.overflow = "auto";
@@ -55,6 +75,20 @@ NAV
 				burgerPattyClose.style.display = "none";
 				blerHelper(header, mainWrap, 0);
 				blerHelper(navBar, footer, 0);
+				
+				
+				// siteMapSVG[0].querySelector(".siteMapSvgPath").classList.toggle("animateSiteMapSvgPath", false);
+				// siteMapSVG[1].querySelector(".siteMapSvgPath").classList.toggle("animateSiteMapSvgPath", false);
+				
+				// for (var j2 = 0; j2 < siteMapSVG[2].querySelectorAll(".siteMapSvgPath").length; j2++) {
+					// siteMapSVG[2].querySelectorAll(".siteMapSvgPath")[j2].classList.toggle("animateSiteMapSvgPath", false);
+				// }
+				
+				// for (var i = 0; i < siteMapSvgPath.length; i++) {
+					// siteMapSVG[0].classList.toggle("animateSiteMapSvgPath0", false);
+					// siteMapSvgPath[1].classList.toggle("animateSiteMapSvgPath1", false);
+				// }
+				
 				navOpen = false;
 			}
 		}

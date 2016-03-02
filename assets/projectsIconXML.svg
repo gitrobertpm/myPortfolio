@@ -1,1 +1,7 @@
-<svg id="Layer_18" data-name="Layer 18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 109 77"><defs><style>.cls-1{fill:none;stroke:#323232;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style></defs><title>projectsIconXML</title><polygon class="cls-1" points="57.5 1.5 47.5 1.5 1.5 69.13 7.5 75.5 101.5 75.5 107.5 69 57.5 1.5"/><polyline class="cls-1" points="56.5 2.5 14.5 64.5 87.5 64.5"/><polyline class="cls-1" points="1.5 68.5 91.5 68.5 54.5 17"/><polyline class="cls-1" points="101.5 73.67 56.5 11 20.5 63"/></svg>
+<svg id="Layer_18" data-name="Layer 18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 109 77">
+  <title>projectsIconXML</title>
+  <polygon points="57.5 1.5 47.5 1.5 1.5 69.13 7.5 75.5 101.5 75.5 107.5 69 57.5 1.5" style="fill: none;stroke: #323232;stroke-linecap: round;stroke-linejoin: round;stroke-width: 3px"/>
+  <polyline points="56.5 2.5 14.5 64.5 87.5 64.5" style="fill: none;stroke: #323232;stroke-linecap: round;stroke-linejoin: round;stroke-width: 3px"/>
+  <polyline points="1.5 68.5 91.5 68.5 54.5 17" style="fill: none;stroke: #323232;stroke-linecap: round;stroke-linejoin: round;stroke-width: 3px"/>
+  <polyline points="101.5 73.67 56.5 11 20.5 63" style="fill: none;stroke: #323232;stroke-linecap: round;stroke-linejoin: round;stroke-width: 3px"/>
+</svg>
