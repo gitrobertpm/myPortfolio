@@ -3,7 +3,6 @@
 	width: auto;
 	
 	margin:auto auto 45px;
-	/* background: rgb(200,200,200); */
 	border-radius: 3px;
 	border: 1px solid rgba(200,200,200,0.5);
 	box-shadow: 5px 5px 5px rgba(100,100,100,0.5);
@@ -15,7 +14,6 @@
 
 .psBorder {
 	border-radius: 3px;
-	/* border: 10px solid rgb(100,181,246); */
 	border: 10px solid rgb(245,245,245);
 	
 }
@@ -37,8 +35,6 @@
 
 .psTitleWrap {
 	padding-top: 20px;
-	padding-right: 20px;
-	padding-left: 20px;
 	padding-bottom: 10px;
 	-webkit-transition: .25s ease-out;transition: .25s ease-out;
 }
@@ -55,7 +51,6 @@
 #meTitle {
 	max-width: 100px;
 	-webkit-transition: .25s ease-out;transition: .25s ease-out;
-	/* animation: fill 2s ease-out forwards; */
 }
 
 .psTitle2 {
@@ -69,10 +64,6 @@
 .psContentWrap {
 	padding-bottom: 25px;
 }
-
-/* .psImgWrap img {
-	margin: 10px auto;
-} */
 
 .psImgWrap img,
 .psImgWrap svg {
@@ -91,7 +82,6 @@
 	display: none;
 }
 
-
 .CheckItOutBtn {
 	color: rgb(245,245,245);
 	background: rgb(255,60,0);
@@ -101,48 +91,15 @@
 	color: rgb(75,175,255);
 }
 
-.mePath {
+.psSvgPath {
+	-webkit-transition: .25s ease-out;transition: .25s ease-out;
+	-webkit-transition: transform 1s ease-out .65s;transition: transform 1s ease-out .65s;
+}
+
+.psSvg:nth-of-type(1) .psSvgPath {
 	fill: rgb(245,245,245);
 }
 
-@media screen and (min-width: 600px) {
-	/* .mePath {
-		
-	} */
-	
-	.psInnerWrap1:hover > .psTitleWrap1 > #meTitle > .mePath {
-		fill: transparent ;
-		stroke-dasharray: 600;
-		stroke-dashoffset: 600;
-		-webkit-transition: .25s ease-out;transition: .25s ease-out;
-		-webkit-animation: doThatLineThing 2s ease-out forwards,fill 1.5s ease-out 1s forwards;
-		animation: doThatLineThing 2s ease-out forwards,fill 1s ease-out 1.5s forwards;
-	}
+@media screen and (min-width: 750px) {
 
-	@-webkit-keyframes doThatLineThing {
-		100% {
-			stroke-dashoffset: 0;
-		}
-	}
-	@keyframes doThatLineThing {
-		100% {
-			stroke-dashoffset: 0;
-		}
-	}
-
-	@-webkit-keyframes fill {
-		100% {
-			fill: rgb(245,245,245);
-		}
-	}
-	@keyframes fill {
-		100% {
-			fill: rgb(245,245,245);
-		}
-	}
-
-
-	.psTitleWrap:hover > #meTitle > .mePath {
-		/* fill: rgb(255,100,0) !important; */
-	}
 }

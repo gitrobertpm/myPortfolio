@@ -1,0 +1,24 @@
+.myLogoPath {
+	stroke-dasharray: 0 !important;
+	stroke-dashoffset: 0 !important;
+	animation: none !important;
+}
+
+.siteMapListItem a:hover > .siteMapSVG > .siteMapSvgPath {
+	stroke-dasharray: 0 !important;
+	stroke-dashoffset: 0 !important;
+	animation: none !important;
+}
+
+.psInnerWrap1:hover > .psTitleWrap1 > #meTitle > .psSvgPath {
+	fill: rgb(245,245,245) !important;
+	stroke-dasharray: 0 !important;
+	stroke-dashoffset: 0 !important;
+	animation: none !important;
+}
+
+.psInnerWrap:hover > .psContentWrap > .psImgWrap > .psSvg > .psSvgPath {
+	stroke-dasharray: 0 !important;
+	stroke-dashoffset: 0 !important;
+	animation: none !important;
+}
