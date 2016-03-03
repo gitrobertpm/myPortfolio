@@ -117,6 +117,10 @@
 		overflow: hidden; 
 	}
 	
+	.burgerPattyClose {
+		box-shadow: 10px 10px 10px rgba(25,25,25,0.9);
+	}
+	
 	.burgerWrapToggle {
 		top: 110px;
 		margin-left: -25px;
