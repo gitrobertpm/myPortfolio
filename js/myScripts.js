@@ -53,13 +53,20 @@ NAV
 			if (!navOpen) {
 				body.style.overflow = "hidden";
 				nav.classList.toggle("openNav", true);
-				setTimeout(function(){ burgerWrap.classList.toggle("burgerWrapToggle", true); }, 750);
+				
+				if (width < 750) {
+					setTimeout(function(){ burgerWrap.classList.toggle("burgerWrapToggle", true); }, 100);
+				} else if (width > 749) {
+					setTimeout(function(){ burgerWrap.classList.toggle("burgerWrapToggle", true); }, 750);
+				}
+				
 				burgerPattyClose.style.display = "block";
 				siteMapWrap.style.display = "block";
 				
 				if (width > 750) {
 					blerHelper(navBar, footer, 1.5);
 					blerHelper(header, mainWrap, 3);
+					nav.style.height = "" + height + "px";
 				}	
 				
 				siteMapWrap.appendChild(burgerWrap);
