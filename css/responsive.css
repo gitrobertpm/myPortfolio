@@ -20,7 +20,7 @@
 	/*********************************************************
 	 NAV 500px
 	**********************************************************/
-	.navWrap {
+	.navBarInnerWrap {
 		padding-left: 35px;
 	}
 
@@ -113,7 +113,7 @@
 	}
 	
 	.openNav {
-		top: 50px;
+		top: 0px;
 		overflow: hidden; 
 	}
 	
@@ -122,17 +122,20 @@
 	}
 	
 	.burgerWrapToggle {
-		top: 110px;
-		margin-left: -25px;
+		top: 25px;
+		margin-left: auto;
+		left: auto;
+		right: 100px;
 	}
 	
 	.siteMapWrap {
-		top: 25px !important;
+		top: 0px;
 		left: 50%;
 		width: 90%;
-		max-width: 1100px;
+		height: auto;
+		max-width: 1000px;
 		padding: 35px;
-		padding-top: 75px;
+		/* padding-top: 75px; */
 		margin: 15px auto;
 		margin-left: -45%;
 		border-radius: 2px;
@@ -457,9 +460,9 @@
 
 
 	/*********************************************************
-	 NAV
+	 NAV 1000px
 	**********************************************************/
-
+	
 	/*** END NAV *********************************************/
 
 
@@ -532,6 +535,14 @@
 	nav {
 		left: 50%;
 		margin-left: -570px;
+		-webkit-transition: left 0s,
+				   margin-left 0s,
+				   width .75s ease-out, 
+				   height 1s ease-out .45s;
+		transition: left 0s,
+				   margin-left 0s,
+				   width .75s ease-out, 
+				   height 1s ease-out .45s;
 	}
 	
 	.openNav {
@@ -540,7 +551,14 @@
 	}
 	
 	.siteMapWrap {
-		margin-left: -535px;
+		margin-left: -500px;
+	}
+	
+	.burgerWrapToggle {
+		top: 35px;
+		margin-left: 400px;
+		left: 50%;
+		right: auto;
 	}
 	/*** END NAV *********************************************/
 	
