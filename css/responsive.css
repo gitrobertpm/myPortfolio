@@ -125,8 +125,9 @@
 	
 	.openNav {
 		top: 0px;
-		padding-bottom: 50px;
-		height: 150%;
+		/* padding-bottom: 50px; */
+		height: 100%;
+		background: none; 
 		/* overflow: hidden;  */
 	}
 	
@@ -135,10 +136,21 @@
 	} */
 	
 	.burgerWrapToggle {
-		top: 25px;
+		/* top: 30px; */
 		/* margin-left: auto;
 		left: auto; */
-		right: 60px;
+		/* right: 75px; */
+	}
+	
+	@keyframes trasnformBurger {
+		50% {
+			top: 30px;
+			right: calc(100% - 30px);
+		}
+		100% {
+			top: 30px;
+			right: 65px;
+		}
 	}
 	
 	.siteMapWrap {
@@ -146,12 +158,12 @@
 		left: 50%;
 		width: 90%;
 		height: auto;
-		max-width: 1000px;
+		/* max-width: 850px; */
 		padding: 35px;
 		/* padding-top: 75px; */
 		margin: 15px auto;
 		margin-left: -45%;
-		border-radius: 2px;
+		border-radius: 3px;
 		border: 2px solid rgb(245,25,25);
 		box-shadow: 15px 15px 10px rgba(25,25,25,0.9), 3px 3px 3px rgba(50,50,50,0.5) inset, -3px -3px 3px rgba(50,50,50,0.3) inset;
 	}
@@ -164,7 +176,8 @@
 	}
 
 	.siteMapList li a {
-		display: block;
+		/* display: inline-block; */
+		max-width: 150px;
 		margin: auto;
 		padding-bottom: 50px !important;
 	}
@@ -485,12 +498,34 @@
 	/*********************************************************
 	 NAV 1000px
 	**********************************************************/
-	.burgerWrapToggle {
-		/* top: 35px; */
-		
+	.siteMapWrap {
+		/* top: 0px;
 		left: 50%;
-		margin-left: 435px;
-		right: auto;
+		width: 850px;
+		height: auto; */
+		max-width: 850px;
+		/* padding: 35px; */
+		/* padding-top: 75px; */
+		margin: 15px auto;
+		margin-left: -425px;
+		/* border-radius: 3px;
+		border: 2px solid rgb(245,25,25); */
+		/* box-shadow: 15px 15px 10px rgba(25,25,25,0.9), 3px 3px 3px rgba(50,50,50,0.5) inset, -3px -3px 3px rgba(50,50,50,0.3) inset; */
+	}
+	
+	.burgerWrapToggle {
+		right: calc(50% + 400px);
+	}
+	
+	@keyframes trasnformBurger {
+		50% {
+			top: 30px;
+			right: calc(50% + 400px);
+		}
+		100% {
+			top: 30px;
+			right: calc(50% - 400px);
+		}
 	}
 	/*** END NAV *********************************************/
 
@@ -579,9 +614,9 @@
 		margin-left: -600px;
 	}
 	
-	.siteMapWrap {
+	/* .siteMapWrap {
 		margin-left: -500px;
-	}
+	} */
 	/*** END NAV *********************************************/
 	
 	

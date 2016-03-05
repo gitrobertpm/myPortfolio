@@ -13,7 +13,7 @@
 }
 
 html,body {
-	height: 100%;
+	min-height: 100%;
 }
 
 body {
@@ -109,6 +109,106 @@ hr {
 /*********************************************************
  NAV
 **********************************************************/
+.burgerWrap {
+	width: 50px;
+	margin: auto;
+	cursor: pointer;
+	-webkit-transition: .35s ease-out;transition: .35s ease-out;
+	/* -webkit-transition: top 1s ease-out,
+			   right 1s ease-out,
+			   width 1s ease-out, 
+			   height 1s ease-out .1s;
+	transition: top .1s ease-out,
+			   right 1s ease-out,
+			   width 1s ease-out, 
+			   height 1s ease-out .1s;  */
+}
+
+.burgerWrapToggle {
+	position: fixed;
+	top: 2px;
+	right: calc(100% - 30px);
+	width: 40px;
+	height: 30px;
+	padding: 5px;
+	padding-top: 7px;
+	background: rgb(245,245,245);
+	border-radius: 3px;
+	box-shadow: 1px 1px 2px rgba(150,150,150,0.5), -1px -1px 2px rgba(200,200,200,0.1);
+	animation: trasnformBurger .75s ease-out .1s forwards;
+	z-index: 99999;
+}
+
+@keyframes trasnformBurger {
+	50% {
+		top: 25px;
+		right: calc(100% - 30px);
+	}
+	100% {
+		top: 25px;
+		right: 35px;
+	}
+}
+
+.burger {
+	display: block;
+	width: 40px;
+	height: 5px;
+	margin: 5px auto auto;
+	background: rgb(245,245,245);
+	border-radius: 10px;
+	/* -webkit-transition: .5s ease-out;transition: .5s ease-out; */
+	-webkit-transition: background .5s ease-out,
+	            transform .5s ease-out;
+	transition: background .5s ease-out,
+	            transform .5s ease-out;
+}
+
+.burgerWrap:hover > .burger {
+	background: rgb(30,145,255);
+}
+
+.burgerPatty {
+	margin: 5px auto;
+}
+
+.burgerTopClose {
+	width: 26px;
+	/* margin-top: 15px; */
+	background: rgb(100,100,100);
+	-webkit-transform: rotate(-45deg);transform: rotate(-45deg);
+	/* -webkit-transition: .5s ease-out;transition: .5s ease-out; */
+	/* -webkit-transition: background .5s ease-out,
+	            transform .5s ease-out;
+	transition: background .5s ease-out,
+	            transform .5s ease-out; */
+}
+
+.burgerBottomClose {
+	width: 26px;
+	margin-top: -5px;
+	/* margin-bottom: 10px; */
+	background: rgb(100,100,100);
+	-webkit-transform: rotate(45deg);transform: rotate(45deg);
+	/* -webkit-transition: .5s ease-out;transition: .5s ease-out; */
+	/* -webkit-transition: background .5s ease-out,
+	            transform .5s ease-out;
+	transition: background .5s ease-out,
+	            transform .5s ease-out; */
+}
+
+.burgerWrapToggle:hover {
+	border: 1px solid rgb(245,25,25);
+	background: rgba(25,25,25,.99);
+}
+
+.burgerWrapToggle:hover > .burgerTopClose, .burgerWrap:hover > .burgerBottomClose  {
+	background: rgba(245,245,245,.99);
+	
+}
+
+
+
 .navBarOuterWrap {
 	position: fixed;
 	top: 0;
@@ -138,141 +238,73 @@ hr {
 nav {
 	position: fixed;
 	top: 2px;
+	left: 10px;
 	right: auto;
 	bottom: auto;
-	left: 10px;
 	text-align: center;
-	width: 45px;
+	width: 47px;
 	max-width: 1200px;
 	max-height: 40px;
 	margin-left: auto;
+	/* border: 1px solid black; */
 	overflow: hidden;
 	z-index: 9999;
 	-webkit-transition: left .1s ease-out,
 			   margin-left .1s ease-out,
-			   width .1s ease-out, 
-			   height .1s ease-out .1s;
+			   right .1s ease-out,
+			   bottom .15s ease-out,
+			   width .15s ease-out, 
+			   height .15s ease-out .1s;
 	transition: left .1s ease-out,
 			   margin-left .1s ease-out,
-			   width .1s ease-out, 
-			   height .1s ease-out .1s;
+			   right .1s ease-out,
+			   bottom .15s ease-out,
+			   width .15s ease-out, 
+			   height .15s ease-out .1s; 
 }
 
 .openNav {
 	position: fixed;
 	width: 100%;
-	min-height: 125%;
-	max-height: auto;
-	top: -50px;
+	min-height: 100%;
+	/* max-height: 100%; */
+	top: 0;
 	left: 0;
 	right: 0;
-	bottom: 0px;
+	bottom: 0;
+	background: white;
 	overflow: auto !important;
-}
-
-.burgerWrap {
-	width: 50px;
-	margin: auto;
-	cursor: pointer;
-	-webkit-transition: .25s ease-out;transition: .25s ease-out;
-}
-
-.burgerWrapToggle {
-	position: fixed;
-	top: 15px;
-	right: 20px;
-	width: 40px;
-	height: 30px;
-	padding: 5px;
-	padding-top: 7px;
-	background: rgb(245,245,245);
-	border-radius: 3px;
-	box-shadow: 1px 1px 2px rgba(150,150,150,0.5), -1px -1px 2px rgba(200,200,200,0.1);
-	-webkit-transition: .25s ease-out;transition: .25s ease-out;
-}
-
-.burger {
-	display: block;
-	width: 40px;
-	height: 5px;
-	margin: 5px auto auto;
-	background: rgb(245,245,245);
-	border-radius: 10px;
-	-webkit-transition: .35s ease-out;transition: .35s ease-out;
-	-webkit-transition: background .5s ease-out,
-	            transform .5s ease-out;
-	transition: background .5s ease-out,
-	            transform .5s ease-out;
-}
-
-.burgerWrap:hover > .burger {
-	background: rgb(30,145,255);
-}
-
-.burgerPatty {
-	margin: 5px auto;
-}
-
-.burgerTopClose {
-	width: 26px;
-	/* margin-top: 15px; */
-	background: rgb(100,100,100);
-	-webkit-transform: rotate(-45deg);transform: rotate(-45deg);
-	-webkit-transition: .35s ease-out;transition: .35s ease-out;
-	/* -webkit-transition: background .5s ease-out,
-	            transform .5s ease-out;
-	transition: background .5s ease-out,
-	            transform .5s ease-out; */
-}
-
-.burgerBottomClose {
-	width: 26px;
-	margin-top: -5px;
-	/* margin-bottom: 10px; */
-	background: rgb(100,100,100);
-	-webkit-transform: rotate(45deg);transform: rotate(45deg);
-	-webkit-transition: .35s ease-out;transition: .35s ease-out;
-	/* -webkit-transition: background .5s ease-out,
-	            transform .5s ease-out;
-	transition: background .5s ease-out,
-	            transform .5s ease-out; */
-}
-
-.burgerWrapToggle:hover {
-	border: 1px solid rgb(245,25,25);
-	background: rgba(25,25,25,.99);
-}
-
-.burgerWrapToggle:hover > .burgerTopClose, .burgerWrap:hover > .burgerBottomClose  {
-	background: rgba(245,245,245,.99);
-	
 }
 
 .siteMapWrap {
 	display: none;
 	position: absolute;
-	top: 25px;
+	top: 0px;
 	left: 0;
+	right: 0;
+	bottom: 0;
 	width: 100%;
 	height: auto;
 	/* max-width: 1100px; */
 	padding: 15px;
 	padding-top: 10px;
-	padding-bottom: 75px;
-	margin: 15px auto auto;
+	padding-bottom: 35px;
+	margin: auto;
 	background: white;
-	border: 1px solid rgba(25,25,25,0.5);
+	
 	box-shadow: 0px 10px 10px rgba(25,25,25,0.9);
 	overflow: auto;
+	/* border: 1px solid orange; */
 }
 
 .siteMapInnerWrap {
 	position: relative;
+	/* border: 1px solid blue; */
 }
 
 .siteMapWrap h2 {
 	float: left;
-	margin-top: 10px;
+	margin-top: 5px;
 	margin-left: 7px;
 	font-size: 2em;
 }
@@ -283,6 +315,7 @@ nav {
 	-webkit-box-pack: center;-webkit-justify-content: center;-ms-flex-pack: center;justify-content: center;
 	width: 100%;
 	padding: 5px;
+	/* border: 1px solid pink; */
 }
 
 .siteMapList li {
@@ -296,8 +329,9 @@ nav {
 }
 
 .siteMapList li a {
-	display: block;
+	display: inline-block;
 	width: 100%;
+	max-width: 90px;
 	height: 100%;
 	padding: 5px;
 	color: rgb(150,150,150);

@@ -65,7 +65,7 @@ NAV
 					blerHelper(navBar, footer, 1.5);
 					blerHelper(header, mainWrap, 3);
 					setTimeout(function(){ burgerWrap.classList.toggle("burgerWrapToggle", true); }, 750);
-					//burgerWrap.classList.toggle("burgerWrapToggle", true);
+					burgerWrap.classList.toggle("burgerWrapToggle", true);
 					if (height < 850) {
 						setTimeout(function(){ nav.style.overflow = "scroll"; }, 1000);
 					}
@@ -76,9 +76,10 @@ NAV
 				burger[0].classList.toggle("burgerTopClose", true);
 				burger[2].classList.toggle("burgerBottomClose", true);
 				
-				siteMapWrap.style.display = "block";
+				setTimeout(function(){ siteMapWrap.style.display = "block"; }, 250);
 				
-				siteMapWrap.appendChild(burgerWrap);
+				
+				//siteMapWrap.appendChild(burgerWrap);
 
 				navOpen = true;
 			} else if (navOpen) {
@@ -98,7 +99,7 @@ NAV
 				
 				siteMapWrap.style.display = "none";
 				
-				nav.insertBefore(burgerWrap, nav.childNodes[0]);
+				//nav.insertBefore(burgerWrap, nav.childNodes[0]);
 				
 				navOpen = false;
 			}
