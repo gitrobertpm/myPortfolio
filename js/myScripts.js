@@ -16,10 +16,12 @@ var body = document.getElementsByTagName("body")[0];
 var nav = document.getElementsByTagName("nav")[0];
 var openNav = document.getElementsByTagName("openNav")[0];
 var burgerWrap = document.getElementsByClassName("burgerWrap")[0];
-var burgerPattyClose = document.getElementsByClassName("burgerPattyClose")[0];
+var burgerPatty = document.getElementsByClassName("burgerPatty")[0];
 var siteMapWrap = document.getElementsByClassName("siteMapWrap")[0];
-var navItem = document.getElementsByClassName("navItem");
+var siteMapListItem = document.getElementsByClassName("siteMapListItem");
 var backToTop = document.getElementsByClassName("backToTop");
+
+var burger = document.getElementsByClassName("burger");
 
 var siteMapSVG = document.getElementsByClassName("siteMapSVG");
 var siteMapSvgPath = document.getElementsByClassName("siteMapSvgPath");
@@ -51,23 +53,29 @@ NAV
 		// OPEN AND CLOSE NAV
 		burgerWrap.onclick = function() {
 			if (!navOpen) {
-				
+				body.style.overflow = "hidden";
 				nav.classList.toggle("openNav", true);
+				//nav.style.overflow = "auto";
 				
 				if (width < 750) {
-					body.style.overflow = "hidden";
+					
 					setTimeout(function(){ burgerWrap.classList.toggle("burgerWrapToggle", true); }, 100);
+					//burgerWrap.classList.toggle("burgerWrapToggle", true);
 				} else if (width > 749) {
 					blerHelper(navBar, footer, 1.5);
 					blerHelper(header, mainWrap, 3);
 					setTimeout(function(){ burgerWrap.classList.toggle("burgerWrapToggle", true); }, 750);
-					if (height < 775) {
-						setTimeout(function(){ nav.style.overflow = "auto"; }, 1000);
+					//burgerWrap.classList.toggle("burgerWrapToggle", true);
+					if (height < 850) {
+						setTimeout(function(){ nav.style.overflow = "scroll"; }, 1000);
 					}
 					
 				}
 				
-				burgerPattyClose.style.display = "block";
+				burgerPatty.style.display = "none";
+				burger[0].classList.toggle("burgerTopClose", true);
+				burger[2].classList.toggle("burgerBottomClose", true);
+				
 				siteMapWrap.style.display = "block";
 				
 				siteMapWrap.appendChild(burgerWrap);
@@ -76,13 +84,19 @@ NAV
 			} else if (navOpen) {
 				body.style.overflow = "auto";
 				nav.classList.toggle("openNav", false);
+				//nav.style.overflow = "hidden";
 				burgerWrap.classList.toggle("burgerWrapToggle", false);
-				burgerPattyClose.style.display = "none";
-				siteMapWrap.style.display = "none";
+				
 				nav.style.overflow = "hidden";
 				
 				blerHelper(header, mainWrap, 0);
 				blerHelper(navBar, footer, 0);
+				
+				burgerPatty.style.display = "block";
+				burger[0].classList.toggle("burgerTopClose", false);
+				burger[2].classList.toggle("burgerBottomClose", false);
+				
+				siteMapWrap.style.display = "none";
 				
 				nav.insertBefore(burgerWrap, nav.childNodes[0]);
 				

@@ -31,6 +31,17 @@
 	.navBarList {
 		margin-right: 25px;
 	}
+	
+	.siteMapWrap h2 {
+		float: none;
+		margin: none;
+		font-size: 2.25em;
+	}
+	
+	.siteMapList li {
+		max-width: 100px;
+		margin: 20px;
+	}
 	/*** END NAV *********************************************/
 	
 	
@@ -114,18 +125,20 @@
 	
 	.openNav {
 		top: 0px;
-		overflow: hidden; 
+		padding-bottom: 50px;
+		height: 150%;
+		/* overflow: hidden;  */
 	}
 	
-	.burgerPattyClose {
+	/* .burgerPattyClose {
 		box-shadow: 10px 10px 10px rgba(25,25,25,0.9);
-	}
+	} */
 	
 	.burgerWrapToggle {
 		top: 25px;
-		margin-left: auto;
-		left: auto;
-		right: 100px;
+		/* margin-left: auto;
+		left: auto; */
+		right: 60px;
 	}
 	
 	.siteMapWrap {
@@ -145,11 +158,15 @@
 	
 	.siteMapList li {
 		max-width: 150px;
-		max-height: 150px;
+		max-height: 175px;
+		padding: 10px;
+		margin: 25px;
 	}
 
 	.siteMapList li a {
+		display: block;
 		margin: auto;
+		padding-bottom: 50px !important;
 	}
 	
 	.siteMapList li a:active, .siteMapList li a:focus, .siteMapList li a:hover {
@@ -157,16 +174,17 @@
 	}
 	
 	.siteMapList svg {
-		width: 125px;
+		width: 65px;
 		height: 105px;
+		/* margin-bottom: 0px; */
 	}
 	
-	.siteMapSvgPath {
-		-webkit-transition: .25s ease-out;transition: .25s ease-out;
-		-webkit-transition: transform 1s ease-out .65s;transition: transform 1s ease-out .65s;
+	.siteMapLinkTitle {
+		display: inline-block;
+		margin-top: -10px;
 	}
 	
-	.siteMapListItem:nth-of-type(1) a:hover > .siteMapSVG > .siteMapSvgPath {
+	/* .siteMapListItem:nth-of-type(1) a:hover > .siteMapSVG > .siteMapSvgPath {
 		stroke-dasharray: 275;
 		stroke-dashoffset: 275;
 	}
@@ -251,12 +269,17 @@
 	.siteMapListItem:nth-of-type(7) a:hover > .siteMapSVG > .siteMapSvgPath  {
 		stroke-dasharray: 175;
 		stroke-dashoffset: 175;
-	}
+	} */
 	
 	
 	.siteMapListItem a:hover > .siteMapSVG > .siteMapSvgPath {
 		stroke: rgb(35,145,255) !important;
-		-webkit-animation: offsetNav 1s ease-out forwards;animation: offsetNav 1s ease-out forwards;
+		/* -webkit-animation: offsetNav 1s ease-out forwards;animation: offsetNav 1s ease-out forwards; */
+	}
+	
+	.siteMapSvgPath {
+		-webkit-transition: stroke .35s ease-out !important;transition: stroke .35s ease-out !important;
+		-webkit-transition: transform 1s ease-out .65s;transition: transform 1s ease-out .65s;
 	}
 	
 	@-webkit-keyframes offsetNav {
@@ -462,7 +485,13 @@
 	/*********************************************************
 	 NAV 1000px
 	**********************************************************/
-	
+	.burgerWrapToggle {
+		/* top: 35px; */
+		
+		left: 50%;
+		margin-left: 435px;
+		right: auto;
+	}
 	/*** END NAV *********************************************/
 
 
@@ -552,13 +581,6 @@
 	
 	.siteMapWrap {
 		margin-left: -500px;
-	}
-	
-	.burgerWrapToggle {
-		top: 35px;
-		margin-left: 400px;
-		left: 50%;
-		right: auto;
 	}
 	/*** END NAV *********************************************/
 	
