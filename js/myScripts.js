@@ -141,14 +141,14 @@ NAV
 /*===============================================
 STICKY NAV
 ===============================================*/
-// var stickyNav = function() {
+var stickyNav = function() {
 		
-	// // VARIABLES TO GET SCROLL DISTANCE FOR ALL BROWSERS
-	// var distance = document.getElementsByTagName("html")[0].scrollTop;
-	// var distance2 = document.body.scrollTop;
+	// VARIABLES TO GET SCROLL DISTANCE FOR ALL BROWSERS
+	var distance = document.getElementsByTagName("html")[0].scrollTop;
+	var distance2 = document.body.scrollTop;
 	
-	// // MAKE RESPONSIVE NAV STICK ON SCROLL
-	// if (distance > 1 || distance2 > 1) {
+	// MAKE RESPONSIVE NAV STICK ON SCROLL
+	if (distance > 1 || distance2 > 1) {
 		// if (navigator.userAgent.indexOf("Trident") > 0) {
 			// return;
 			
@@ -163,19 +163,19 @@ STICKY NAV
 				// navBar.style.top = distance2 + "px";
 			// }
 		// }
-		// backToTop[0].style.background = "rgb(30,145,255)";
-		// backToTop[1].style.background = "rgb(30,145,255)";
+		backToTop[0].style.background = "rgb(30,145,255)";
+		backToTop[1].style.background = "rgb(30,145,255)";
 		
-	// } else {
-		// navBar.style.top = "0";
+	} else {
+		//navBar.style.top = "0";
 
-		// backToTop[0].style.background = "rgb(245,245,245)";
-		// backToTop[1].style.background = "rgb(245,245,245)";
-	// }
-// };
+		backToTop[0].style.background = "rgb(245,245,245)";
+		backToTop[1].style.background = "rgb(245,245,245)";
+	}
+};
 
-// window.onscroll = function() {stickyNav()};
-// window.onload = function() {stickyNav()};
+window.onscroll = function() {stickyNav()};
+window.onload = function() {stickyNav()};
 //* ========================================= *//
 
 

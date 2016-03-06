@@ -168,9 +168,13 @@
 		box-shadow: 15px 15px 10px rgba(25,25,25,0.9), 3px 3px 3px rgba(50,50,50,0.5) inset, -3px -3px 3px rgba(50,50,50,0.3) inset;
 	}
 	
+	.siteMapList {
+		padding-top: 0px;
+	}
+	
 	.siteMapList li {
 		max-width: 150px;
-		max-height: 175px;
+		height: 175px;
 		padding: 10px;
 		margin: 25px;
 	}

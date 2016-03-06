@@ -146,7 +146,7 @@ hr {
 	}
 	100% {
 		top: 25px;
-		right: 35px;
+		right: 25px;
 	}
 }
 
@@ -313,19 +313,21 @@ nav {
 	/* display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;display: box;
 	-webkit-flex-wrap: wrap;-ms-flex-wrap: wrap;flex-wrap: wrap;
 	-webkit-box-pack: center;-webkit-justify-content: center;-ms-flex-pack: center;justify-content: center; */
-	display: -webkit-flex; display: flex; -webkit-flex-flow: row wrap; flex-flow: row wrap; -webkit-justify-content: center; justify-content:center;
+	/* display: -webkit-flex; display: flex; -webkit-flex-flow: row wrap; flex-flow: row wrap; -webkit-justify-content: center; justify-content:center; */
 	width: 100%;
 	padding: 5px;
+	padding-top: 50px;
 	/* border: 1px solid pink; */
 }
 
 .siteMapList li {
-	-webkit-flex: 1 0 auto; flex: 1 0 auto;
+	/* -webkit-flex: 1 0 auto; flex: 1 0 auto; */
 	display: inline-block;
+	vertical-align: top;
 	font-size: .88em;
 	width: 90%;
-	max-width: 90px;
-	max-height: 150px;
+	max-width: 110px;
+	height: 110px;
 	margin: 10px auto;
 	-webkit-transition: .5s ease-out;transition: .5s ease-out;
 }
@@ -333,7 +335,7 @@ nav {
 .siteMapList li a {
 	display: inline-block;
 	width: 100%;
-	max-width: 90px;
+	max-width: 120px;
 	height: 100%;
 	padding: 5px;
 	color: rgb(150,150,150);
