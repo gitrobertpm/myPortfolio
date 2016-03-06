@@ -310,7 +310,7 @@ nav {
 }
 
 .siteMapList {
-	display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;
+	display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;display: box;
 	-webkit-flex-wrap: wrap;-ms-flex-wrap: wrap;flex-wrap: wrap;
 	-webkit-box-pack: center;-webkit-justify-content: center;-ms-flex-pack: center;justify-content: center;
 	width: 100%;
