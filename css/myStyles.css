@@ -310,15 +310,17 @@ nav {
 }
 
 .siteMapList {
-	display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;display: box;
+	/* display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;display: box;
 	-webkit-flex-wrap: wrap;-ms-flex-wrap: wrap;flex-wrap: wrap;
-	-webkit-box-pack: center;-webkit-justify-content: center;-ms-flex-pack: center;justify-content: center;
+	-webkit-box-pack: center;-webkit-justify-content: center;-ms-flex-pack: center;justify-content: center; */
+	display: -webkit-flex; display: flex; -webkit-flex-flow: row wrap; flex-flow: row wrap; -webkit-justify-content: center; justify-content:center;
 	width: 100%;
 	padding: 5px;
 	/* border: 1px solid pink; */
 }
 
 .siteMapList li {
+	-webkit-flex: 1 0 auto; flex: 1 0 auto;
 	display: inline-block;
 	font-size: .88em;
 	width: 90%;
