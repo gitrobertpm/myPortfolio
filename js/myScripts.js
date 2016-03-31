@@ -11,6 +11,9 @@ var height = window.innerHeight;
 
 
 // NAV VARIABLES
+var navBarOuterWrap = document.getElementsByClassName("navBarOuterWrap")[0];
+var navBarInnerWrap = document.getElementsByClassName("navBarInnerWrap")[0];
+var navBarList = document.getElementsByClassName("navBarList")[0];
 var navBar = document.getElementsByClassName("navBar")[0];
 var body = document.getElementsByTagName("body")[0];
 var nav = document.getElementsByTagName("nav")[0];
@@ -27,17 +30,19 @@ var siteMapSVG = document.getElementsByClassName("siteMapSVG");
 var siteMapSvgPath = document.getElementsByClassName("siteMapSvgPath");
 
 var header = document.getElementsByTagName("header")[0];
+var primeWrap = document.getElementsByClassName("primeWrap")[0];
+var outerMainWrap = document.getElementsByClassName("outerMainWrap")[0];
 var mainWrap = document.getElementsByClassName("mainWrap")[0];
 var footer = document.getElementsByTagName("footer")[0];
 
 // BOOLEAN TO TRACK NAV OPEN STATE
 var navOpen = false;
 
-var blerHelper = function(bler1, bler2, blerTot) {
+var blerHelper = function(blerTot, bler1) {
 	bler1.style.webkitFilter = "blur(" + blerTot + "px)";
 	bler1.style.filter = "blur(" + blerTot + "px)";
-	bler2.style.webkitFilter = "blur(" + blerTot + "px)";
-	bler2.style.filter = "blur(" + blerTot + "px)";
+	// bler2.style.webkitFilter = "blur(" + blerTot + "px)";
+	// bler2.style.filter = "blur(" + blerTot + "px)";
 };
 
 
@@ -53,22 +58,21 @@ NAV
 		// OPEN AND CLOSE NAV
 		burgerWrap.onclick = function() {
 			if (!navOpen) {
-				body.style.overflow = "hidden";
+				navBarInnerWrap.style.height = "auto";
+				navBarList.style.display = "none";
+
 				nav.classList.toggle("openNav", true);
-				//nav.style.overflow = "auto";
 				
-				if (width < 750) {
-					
+				if (width < 750) {	
 					setTimeout(function(){ burgerWrap.classList.toggle("burgerWrapToggle", true); }, 100);
-					//burgerWrap.classList.toggle("burgerWrapToggle", true);
 				} else if (width > 749) {
-					blerHelper(navBar, footer, 1.5);
-					blerHelper(header, mainWrap, 3);
+					blerHelper(3, outerMainWrap);
+
 					setTimeout(function(){ burgerWrap.classList.toggle("burgerWrapToggle", true); }, 750);
 					burgerWrap.classList.toggle("burgerWrapToggle", true);
-					if (height < 850) {
-						setTimeout(function(){ nav.style.overflow = "scroll"; }, 1000);
-					}
+					// if (height < 850) {
+						// setTimeout(function(){ nav.style.overflow = "auto"; }, 1000);
+					// }
 					
 				}
 				
@@ -76,60 +80,29 @@ NAV
 				burger[0].classList.toggle("burgerTopClose", true);
 				burger[2].classList.toggle("burgerBottomClose", true);
 				
-				setTimeout(function(){ siteMapWrap.style.display = "block"; }, 250);
-				
-				
-				//siteMapWrap.appendChild(burgerWrap);
 
 				navOpen = true;
 			} else if (navOpen) {
-				body.style.overflow = "auto";
+				
+				navBarInnerWrap.style.height = "40px";
+				navBarList.style.display = "inline-block";
+				
 				nav.classList.toggle("openNav", false);
-				//nav.style.overflow = "hidden";
+
 				burgerWrap.classList.toggle("burgerWrapToggle", false);
 				
 				nav.style.overflow = "hidden";
 				
-				blerHelper(header, mainWrap, 0);
-				blerHelper(navBar, footer, 0);
+				blerHelper(0, outerMainWrap);
 				
 				burgerPatty.style.display = "block";
 				burger[0].classList.toggle("burgerTopClose", false);
 				burger[2].classList.toggle("burgerBottomClose", false);
 				
-				siteMapWrap.style.display = "none";
-				
-				//nav.insertBefore(burgerWrap, nav.childNodes[0]);
 				
 				navOpen = false;
 			}
 		}
-		
-		// LOOP THROUGH NAV ITEMS
-		// for (var i = 0; i < navItem.length; i++) {
-			
-			// // STICK A NUMBERED MARKER ON EACH NAV LI
-			// navItem[i].marker = i;
-			
-			// // MAKE ITEMS IN PROJ MENU CLICKABLE, DISPLAY MATCHING PROJECT ON PAGE, AND HANDLE NECESSARY BOOLEANS AND COUNTERS
-			// navItem[i].onclick = function() {
-				// for (var j = 0; j < projWrap.length; j++) {
-					// projWrap[j].classList.toggle("showProjWrap", false);
-				// }
-				// projWrap[0].classList.toggle("showFirstProj", false);
-				
-				// projWrap[this.marker].classList.toggle("showProjWrap", true);
-				
-				// nav.classList.toggle("openNav", false);
-				// nav.classList.toggle("closeNav", true);
-				
-				// burgerPattyText.innerHTML = "";
-				
-				// navOpen = false;
-				
-				// counter = this.marker;
-			// };
-		// }
 	};
 
 	doTheNav();
@@ -167,8 +140,6 @@ var stickyNav = function() {
 		backToTop[1].style.background = "rgb(30,145,255)";
 		
 	} else {
-		//navBar.style.top = "0";
-
 		backToTop[0].style.background = "rgb(245,245,245)";
 		backToTop[1].style.background = "rgb(245,245,245)";
 	}

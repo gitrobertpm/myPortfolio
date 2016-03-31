@@ -1,11 +1,13 @@
 .portfolioSection {
 	text-align: center;
 	width: auto;
-	
-	margin:auto auto 45px;
+	margin: 25px auto 75px;
 	border-radius: 3px;
-	border: 1px solid rgba(200,200,200,0.5);
-	box-shadow: 5px 5px 5px rgba(100,100,100,0.5);
+	border-top: 1px solid rgba(200,200,200,0.5);
+	border-right: 1px solid rgb(0,0,0);
+	border-left: 1px solid rgba(200,200,200,0.5);
+	border-bottom: 1px solid rgb(0,0,0);
+	box-shadow: 5px 5px 5px rgba(50,50,50,0.7);
 }
 
 .ps2 {
@@ -14,11 +16,11 @@
 
 .psBorder {
 	border-radius: 3px;
-	border: 10px solid rgb(245,245,245);
-	
+	border: 15px solid rgb(25,25,25);
 }
 
 .psInnerWrap {
+	background: rgb(245,245,245);
 	border-radius: 3px;
 	box-shadow: 3px 3px 3px rgba(245,245,254,0.5) inset, -5px -5px 5px rgba(50,50,50,0.7) inset;
 }
@@ -31,6 +33,26 @@
 .psInnerWrap2 {
 	background: url("../img/bg/myTreehouseProjBG.jpg") no-repeat 50% 50%;
 	background-size: cover;
+}
+
+.psInnerWrap3{
+	background: url("../img/bg/myProjs2.jpg") no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.psInnerWrap4 {
+	background: url("../img/bg/journey.jpg") no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.psInnerWrap5 {
+	background: url("../img/bg/process.jpg") no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.psInnerWrap6 {
+	background: url("../img/bg/blur1.jpg") no-repeat 50% 50%;
+	background-size: 250% auto;
 }
 
 .psTitleWrap {
@@ -53,10 +75,6 @@
 	-webkit-transition: .25s ease-out;transition: .25s ease-out;
 }
 
-.psTitle2 {
-	
-}
-
 .psTitle4 {
 	font-size: 1.5em;
 }
@@ -70,7 +88,11 @@
 	width: 75px;
 	height: 75px;
 	margin: 10px auto;
-	filter: drop-shadow(2px 2px 3px rgba(25,25,25,0.5));
+	-webkit-filter: drop-shadow(2px 2px 3px rgba(25,25,25,0.5));filter: drop-shadow(2px 2px 3px rgba(25,25,25,0.5));
+}
+
+.psImgWrap svg {
+	stroke: rgba(245,245,245,0.9):
 }
 
 .psImgWrap img {
@@ -98,8 +120,4 @@
 
 .psSvg:nth-of-type(1) .psSvgPath {
 	fill: rgb(245,245,245);
-}
-
-@media screen and (min-width: 750px) {
-
 }

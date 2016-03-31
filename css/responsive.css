@@ -23,10 +23,6 @@
 	.navBarInnerWrap {
 		padding-left: 35px;
 	}
-
-	nav {
-		left: 30px;
-	}
 	
 	.navBarList {
 		margin-right: 25px;
@@ -112,37 +108,7 @@
 	/*********************************************************
 	 NAV 750px
 	**********************************************************/
-	nav {
-		-webkit-transition: left .35s,
-				   margin-left .35s,
-				   width .75s ease-out, 
-				   height 1s ease-out .35s;
-		transition: left .35s,
-				   margin-left .35s,
-				   width .75s ease-out, 
-				   height 1s ease-out .35s;
-	}
-	
-	.openNav {
-		top: 0px;
-		/* padding-bottom: 50px; */
-		height: 100%;
-		background: none; 
-		/* overflow: hidden;  */
-	}
-	
-	/* .burgerPattyClose {
-		box-shadow: 10px 10px 10px rgba(25,25,25,0.9);
-	} */
-	
-	.burgerWrapToggle {
-		/* top: 30px; */
-		/* margin-left: auto;
-		left: auto; */
-		/* right: 75px; */
-	}
-	
-	@keyframes trasnformBurger {
+	@-webkit-keyframes trasnformBurger {
 		50% {
 			top: 30px;
 			right: calc(100% - 30px);
@@ -152,20 +118,15 @@
 			right: 65px;
 		}
 	}
-	
-	.siteMapWrap {
-		top: 0px;
-		left: 50%;
-		width: 90%;
-		height: auto;
-		/* max-width: 850px; */
-		padding: 35px;
-		/* padding-top: 75px; */
-		margin: 15px auto;
-		margin-left: -45%;
-		border-radius: 3px;
-		border: 2px solid rgb(245,25,25);
-		box-shadow: 15px 15px 10px rgba(25,25,25,0.9), 3px 3px 3px rgba(50,50,50,0.5) inset, -3px -3px 3px rgba(50,50,50,0.3) inset;
+	@keyframes trasnformBurger {
+		50% {
+			top: 30px;
+			right: calc(100% - 30px);
+		}
+		100% {
+			top: 30px;
+			right: 65px;
+		}
 	}
 	
 	.siteMapList {
@@ -180,20 +141,16 @@
 	}
 
 	.siteMapList li a {
-		/* display: inline-block; */
 		max-width: 150px;
 		margin: auto;
 		padding-bottom: 50px !important;
 	}
 	
-	.siteMapList li a:active, .siteMapList li a:focus, .siteMapList li a:hover {
-		color: rgb(255,60,0);
-	}
+	
 	
 	.siteMapList svg {
 		width: 65px;
 		height: 105px;
-		/* margin-bottom: 0px; */
 	}
 	
 	.siteMapLinkTitle {
@@ -201,102 +158,10 @@
 		margin-top: -10px;
 	}
 	
-	/* .siteMapListItem:nth-of-type(1) a:hover > .siteMapSVG > .siteMapSvgPath {
-		stroke-dasharray: 275;
-		stroke-dashoffset: 275;
-	}
 	
-	
-	
-	.siteMapListItem:nth-of-type(2) a:hover > .siteMapSVG > .siteMapSvgPath {
-		stroke-dasharray: 550;
-		stroke-dashoffset: 550;
-	}
-	
-	
-	
-	.siteMapListItem:nth-of-type(3) a:hover > .siteMapSVG > .siteMapSvgPath {
-		stroke-dasharray: 160;
-		stroke-dashoffset: 160;
-	}
-	
-	.siteMapListItem:nth-of-type(3) a:hover > .siteMapSVG > .siteMapSvgPath:nth-of-type(1)  {
-		stroke-dasharray: 350;
-		stroke-dashoffset: 350;
-	}
-	
-	
-	
-	.siteMapListItem:nth-of-type(4) a:hover > .siteMapSVG > .siteMapSvgPath {
-		stroke-dasharray: 50;
-		stroke-dashoffset: 50;
-	}
-	
-	.siteMapListItem:nth-of-type(4) a:hover > .siteMapSVG > .siteMapSvgPath:nth-of-type(n+2),
-	.siteMapListItem:nth-of-type(4) a:hover > .siteMapSVG > .theHead {
-		-webkit-transform: translate3d(60px,-37px,0px);transform: translate3d(60px,-37px,0px);
-	}
-	
-	.siteMapListItem:nth-of-type(4) a:hover > .siteMapSVG > .siteMapSvgPath:nth-of-type(1)  {
-		stroke-dasharray: 275;
-		stroke-dashoffset: 275;
-	}
-	
-	
-	
-	.siteMapListItem:nth-of-type(5) a:hover > .siteMapSVG > .siteMapSvgPath  {
-		stroke-dasharray: 200;
-		stroke-dashoffset: 200;
-	}
-	
-	.siteMapListItem:nth-of-type(5) a:hover > .siteMapSVG > .siteMapSvgPath:nth-of-type(2)  {
-		-webkit-animation-delay: .25s;animation-delay: .25s;
-	}
-	
-	.siteMapListItem:nth-of-type(5) a:hover > .siteMapSVG > .siteMapSvgPath:nth-of-type(3)  {
-		-webkit-animation-delay: .5s;animation-delay: .5s;
-	}
-	
-	.siteMapListItem:nth-of-type(5) a:hover > .siteMapSVG > .siteMapSvgPath:nth-of-type(4)  {
-		-webkit-animation-delay: .75s;animation-delay: .75s;
-	}
-	
-	.siteMapListItem:nth-of-type(5) a:hover > .siteMapSVG > .siteMapSvgPath:nth-of-type(5)  {
-		-webkit-animation-delay: 1.25s;animation-delay: 1.25s;
-	}
-	
-	.siteMapListItem:nth-of-type(5) a:hover > .siteMapSVG > .siteMapSvgPath:nth-of-type(6)  {
-		-webkit-animation-delay: 1.5s;animation-delay: 1.5s;
-	}
-	
-	.siteMapListItem:nth-of-type(5) a:hover > .siteMapSVG > .siteMapSvgPath:nth-of-type(7)  {
-		-webkit-animation-delay: 1.75s;animation-delay: 1.75s;
-	}
-	
-	.siteMapListItem:nth-of-type(5) a:hover > .siteMapSVG > .siteMapSvgPath:nth-of-type(8)  {
-		-webkit-animation-delay: 2s;animation-delay: 2s;
-	}
-	
-	
-	.siteMapListItem:nth-of-type(6) a:hover > .siteMapSVG > .siteMapSvgPath  {
-		stroke-dasharray: 235;
-		stroke-dashoffset: 235;
-	}
-	
-	.siteMapListItem:nth-of-type(7) a:hover > .siteMapSVG > .siteMapSvgPath  {
-		stroke-dasharray: 175;
-		stroke-dashoffset: 175;
-	} */
-	
-	
-	.siteMapListItem a:hover > .siteMapSVG > .siteMapSvgPath {
-		stroke: rgb(35,145,255) !important;
-		/* -webkit-animation: offsetNav 1s ease-out forwards;animation: offsetNav 1s ease-out forwards; */
-	}
 	
 	.siteMapSvgPath {
 		-webkit-transition: stroke .35s ease-out !important;transition: stroke .35s ease-out !important;
-		-webkit-transition: transform 1s ease-out .65s;transition: transform 1s ease-out .65s;
 	}
 	
 	@-webkit-keyframes offsetNav {
@@ -338,14 +203,36 @@
 	/*********************************************************
 	 MAIN WRAP 750px
 	**********************************************************/
-	/* .movieWrap {
-		width: 200px;
-		height: 280px;
+	.mainWrap {
+		text-align: right;
+		/* min-height: 100%; */
 	}
 	
-	.intro {
-		font-size: 1.25em;
-	} */
+	.portfolioSection {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		margin: 45px auto 75px;
+	}
+	
+	.portfolioSection:nth-child(odd) {
+		float: left;
+		/* margin-right: 75px; */
+	}
+	
+	.portfolioSection:nth-child(even) {
+		
+	}
+	
+	.psInnerWrap {
+		width: 300px;
+		height: 325px;
+	}
+	
+	.psContentWrap {
+		vertical-align: bottom;
+	}
+	
 	
 	.psInnerWrap1:hover > .psTitleWrap1 > #meTitle > .psSvgPath {
 		fill: transparent ;
@@ -365,14 +252,10 @@
 		}
 	}
 
-	
-	
 	.psInnerWrap2:hover > .psContentWrap > .psImgWrap > .psSvg > .psSvgPath {
 		stroke-dasharray: 550;
 		stroke-dashoffset: 550;
 	}
-	
-	
 	
 	.psInnerWrap3:hover > .psContentWrap > .psImgWrap > .psSvg > .psSvgPath {
 		stroke-dasharray: 160;
@@ -383,8 +266,6 @@
 		stroke-dasharray: 350;
 		stroke-dashoffset: 350;
 	}
-	
-	
 	
 	.psInnerWrap4:hover > .psContentWrap > .psImgWrap > .psSvg > .psSvgPath {
 		stroke-dasharray: 50;
@@ -404,8 +285,6 @@
 	.psImgWrap4 svg {
 		height: 105px;
 	}
-	
-	
 	
 	.psInnerWrap5:hover > .psContentWrap > .psImgWrap > .psSvg > .psSvgPath  {
 		stroke-dasharray: 200;
@@ -440,15 +319,20 @@
 		-webkit-animation-delay: 2.75s;animation-delay: 2.75s;
 	}
 	
-	
 	.psInnerWrap6:hover > .psContentWrap > .psImgWrap > .psSvg > .psSvgPath {
 		stroke-dasharray: 235;
 		stroke-dashoffset: 235;
 	}
 
-	
 	.psInnerWrap:hover > .psContentWrap > .psImgWrap > .psSvg > .psSvgPath {
 		-webkit-animation: psOffset 2s ease-out forwards;animation: psOffset 2s ease-out forwards;
+	}
+	
+	.CheckItOutBtn {
+		position: absolute;
+		left: 50%;
+		margin-left: -77px;
+		bottom: 45px;
 	}
 	
 	@-webkit-keyframes psOffset {
@@ -502,25 +386,20 @@
 	/*********************************************************
 	 NAV 1000px
 	**********************************************************/
-	.siteMapWrap {
-		/* top: 0px;
-		left: 50%;
-		width: 850px;
-		height: auto; */
-		max-width: 850px;
-		/* padding: 35px; */
-		/* padding-top: 75px; */
-		margin: 15px auto;
-		margin-left: -425px;
-		/* border-radius: 3px;
-		border: 2px solid rgb(245,25,25); */
-		/* box-shadow: 15px 15px 10px rgba(25,25,25,0.9), 3px 3px 3px rgba(50,50,50,0.5) inset, -3px -3px 3px rgba(50,50,50,0.3) inset; */
-	}
-	
 	.burgerWrapToggle {
 		right: calc(50% + 400px);
 	}
 	
+	@-webkit-keyframes trasnformBurger {
+		50% {
+			top: 30px;
+			right: calc(50% + 400px);
+		}
+		100% {
+			top: 30px;
+			right: calc(50% - 400px);
+		}
+	}
 	@keyframes trasnformBurger {
 		50% {
 			top: 30px;
@@ -536,40 +415,16 @@
 
 	
 	/*********************************************************
-	 MAIN WRAP 1000px
+	 MAIN WRAP
 	**********************************************************/
-	.ps1 {
-		max-width: 275px;
-		clear: both;
-	}
-
-	.ps2 {
-		max-width: 325px;
-		margin-top: -250px;
-		float: left;
+	.portfolioSection {
+		display: inline-block;
+		vertical-align: bottom;
+		max-width: 500px;
 	}
 	
-	.ps3 {
-		max-width: 325px;
-		margin-top: -250px;
-		float: right;
-	}
-	
-	.ps4 {
-		max-width: 275px;
-		clear: both;
-	}
-	
-	.ps5 {
-		max-width: 325px;
-		margin-top: -250px;
-		float: left;
-	}
-	
-	.ps6 {
-		max-width: 325px;
-		margin-top: -250px;
-		float: right;
+	.portfolioSection:nth-child(odd) {
+		margin-right: 75px;
 	}
 	/*** END MAIN WRAP ***************************************/
 
@@ -588,7 +443,43 @@
 /*********************************************************
  X lARGE SCREENS
 **********************************************************/
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1150px) {
+	/*********************************************************
+	 MAIN WRAP
+	**********************************************************/
+	.mainWrap {
+		text-align: center;
+		/* min-height: 100%; */
+	}
+	
+	.portfolioSection {
+		float: none !important;
+	}
+	
+	.portfolioSection:nth-child(odd) {
+		margin-right: auto;
+	}
+	
+	.portfolioSection:nth-child(1), .portfolioSection:nth-child(4) {
+		float: left !important;
+		/* margin-left: 25px;
+		margin-right: 25px; */
+	}
+	
+	.portfolioSection:nth-child(3), .portfolioSection:nth-child(6) {
+		float: right !important;
+		/* margin-left: 25px;
+		margin-right: 25px; */
+	}
+	
+	.portfolioSection:nth-child(even) {
+		
+	}
+	/*** END MAIN WRAP ***************************************/
+}
+
+
+@media screen and (min-width: 1250px) {
 	/*********************************************************
 	 GENERAL
 	**********************************************************/
@@ -600,27 +491,6 @@
 	/*********************************************************
 	 NAV 1200px
 	**********************************************************/
-	nav {
-		left: 50%;
-		margin-left: -570px;
-		-webkit-transition: left 0s,
-				   margin-left 0s,
-				   width .75s ease-out, 
-				   height 1s ease-out .45s;
-		transition: left 0s,
-				   margin-left 0s,
-				   width .75s ease-out, 
-				   height 1s ease-out .45s;
-	}
-	
-	.openNav {
-		left: 50%;
-		margin-left: -600px;
-	}
-	
-	/* .siteMapWrap {
-		margin-left: -500px;
-	} */
 	/*** END NAV *********************************************/
 	
 	
@@ -632,14 +502,6 @@
 		margin-top: -10px;
 	}
 	/*** END HEADER ******************************************/
-
-	
-
-	/*********************************************************
-	 MAIN WRAP
-	**********************************************************/
-
-	/*** END MAIN WRAP ***************************************/
 
 
 	

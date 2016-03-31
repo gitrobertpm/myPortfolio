@@ -100,11 +100,6 @@ hr {
 /*** END GENERAL ****************************************/
 
 
-.primeWrap {
-	position: relative;
-	min-height: 100%;
-}
-
 
 /*********************************************************
  NAV
@@ -114,14 +109,6 @@ hr {
 	margin: auto;
 	cursor: pointer;
 	-webkit-transition: .35s ease-out;transition: .35s ease-out;
-	/* -webkit-transition: top 1s ease-out,
-			   right 1s ease-out,
-			   width 1s ease-out, 
-			   height 1s ease-out .1s;
-	transition: top .1s ease-out,
-			   right 1s ease-out,
-			   width 1s ease-out, 
-			   height 1s ease-out .1s;  */
 }
 
 .burgerWrapToggle {
@@ -135,10 +122,20 @@ hr {
 	background: rgb(245,245,245);
 	border-radius: 3px;
 	box-shadow: 1px 1px 2px rgba(150,150,150,0.5), -1px -1px 2px rgba(200,200,200,0.1);
-	animation: trasnformBurger .75s ease-out .1s forwards;
+	-webkit-animation: trasnformBurger .75s ease-out .1s forwards;animation: trasnformBurger .75s ease-out .1s forwards;
 	z-index: 99999;
 }
 
+@-webkit-keyframes trasnformBurger {
+	50% {
+		top: 20px;
+		right: calc(100% - 30px);
+	}
+	100% {
+		top: 20px;
+		right: 25px;
+	}
+}
 @keyframes trasnformBurger {
 	50% {
 		top: 25px;
@@ -153,11 +150,10 @@ hr {
 .burger {
 	display: block;
 	width: 40px;
-	height: 5px;
+	height: 4px;
 	margin: 5px auto auto;
 	background: rgb(245,245,245);
 	border-radius: 10px;
-	/* -webkit-transition: .5s ease-out;transition: .5s ease-out; */
 	-webkit-transition: background .5s ease-out,
 	            transform .5s ease-out;
 	transition: background .5s ease-out,
@@ -174,27 +170,15 @@ hr {
 
 .burgerTopClose {
 	width: 26px;
-	/* margin-top: 15px; */
 	background: rgb(100,100,100);
 	-webkit-transform: rotate(-45deg);transform: rotate(-45deg);
-	/* -webkit-transition: .5s ease-out;transition: .5s ease-out; */
-	/* -webkit-transition: background .5s ease-out,
-	            transform .5s ease-out;
-	transition: background .5s ease-out,
-	            transform .5s ease-out; */
 }
 
 .burgerBottomClose {
 	width: 26px;
 	margin-top: -5px;
-	/* margin-bottom: 10px; */
 	background: rgb(100,100,100);
 	-webkit-transform: rotate(45deg);transform: rotate(45deg);
-	/* -webkit-transition: .5s ease-out;transition: .5s ease-out; */
-	/* -webkit-transition: background .5s ease-out,
-	            transform .5s ease-out;
-	transition: background .5s ease-out,
-	            transform .5s ease-out; */
 }
 
 .burgerWrapToggle:hover {
@@ -204,20 +188,17 @@ hr {
 
 .burgerWrapToggle:hover > .burgerTopClose, .burgerWrap:hover > .burgerBottomClose  {
 	background: rgba(245,245,245,.99);
-	
 }
-
-
 
 .navBarOuterWrap {
 	position: fixed;
 	top: 0;
 	width: 100%;
+	box-shadow: 0px 2px 3px rgba(50,50,50,0.5);
 	z-index: 99;
 }
 
 .navBar {
-	/* position: fixed; */
 	top: 0;
 	width: 100%;
 	background: rgb(5,5,5);
@@ -230,79 +211,29 @@ hr {
 	height: 40px;
 	padding: 5px 15px;
 	margin: auto;
-	
-	box-shadow: 0px 2px 3px rgba(50,50,50,0.5);
 	z-index: 99;
 }
 
 nav {
-	position: fixed;
-	top: 2px;
-	left: 10px;
-	right: auto;
-	bottom: auto;
+	overflow: hidden;
 	text-align: center;
 	width: 47px;
-	max-width: 1200px;
-	max-height: 40px;
-	margin-left: auto;
-	/* border: 1px solid black; */
-	overflow: hidden;
-	z-index: 9999;
-	-webkit-transition: left .1s ease-out,
-			   margin-left .1s ease-out,
-			   right .1s ease-out,
-			   bottom .15s ease-out,
-			   width .15s ease-out, 
-			   height .15s ease-out .1s;
-	transition: left .1s ease-out,
-			   margin-left .1s ease-out,
-			   right .1s ease-out,
-			   bottom .15s ease-out,
-			   width .15s ease-out, 
-			   height .15s ease-out .1s; 
+	max-width: 1000px;
+	height: 40px;
 }
 
 .openNav {
-	position: fixed;
-	width: 100%;
-	min-height: 100%;
-	/* max-height: 100%; */
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: white;
-	overflow: auto !important;
-}
-
-.siteMapWrap {
-	display: none;
-	position: absolute;
-	top: 0px;
-	left: 0;
-	right: 0;
-	bottom: 0;
+	overflow: auto;
 	width: 100%;
 	height: auto;
-	/* max-width: 1100px; */
-	padding: 15px;
-	padding-top: 10px;
-	padding-bottom: 35px;
-	margin: auto;
-	background: white;
-	
-	box-shadow: 0px 10px 10px rgba(25,25,25,0.9);
-	overflow: auto;
-	/* border: 1px solid orange; */
 }
 
 .siteMapInnerWrap {
 	position: relative;
-	/* border: 1px solid blue; */
 }
 
 .siteMapWrap h2 {
+	color: rgba(245,245,245,0.9);
 	float: left;
 	margin-top: 5px;
 	margin-left: 7px;
@@ -310,18 +241,12 @@ nav {
 }
 
 .siteMapList {
-	/* display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;display: box;
-	-webkit-flex-wrap: wrap;-ms-flex-wrap: wrap;flex-wrap: wrap;
-	-webkit-box-pack: center;-webkit-justify-content: center;-ms-flex-pack: center;justify-content: center; */
-	/* display: -webkit-flex; display: flex; -webkit-flex-flow: row wrap; flex-flow: row wrap; -webkit-justify-content: center; justify-content:center; */
 	width: 100%;
 	padding: 5px;
 	padding-top: 50px;
-	/* border: 1px solid pink; */
 }
 
 .siteMapList li {
-	/* -webkit-flex: 1 0 auto; flex: 1 0 auto; */
 	display: inline-block;
 	vertical-align: top;
 	font-size: .88em;
@@ -334,23 +259,36 @@ nav {
 
 .siteMapList li a {
 	display: inline-block;
+	color: rgba(245,245,245,0.9);
 	width: 100%;
 	max-width: 120px;
 	height: 100%;
 	padding: 5px;
-	color: rgb(150,150,150);
 	border-radius: 3px;
 	box-shadow: 1px 1px 2px rgba(150,150,150,0.5), -1px -1px 2px rgba(200,200,200,0.2);
 }
 
 .siteMapList li:active > a, .siteMapList li:focus > a, .siteMapList li:hover > a {
-	color: rgb(25,25,25);
+	color: rgb(255,60,0);
 }
+
 
 .siteMapList svg{
 	width: 50px;
 	height: 65px;
 	margin: auto;
+}
+
+.siteMapSvgPath  {
+	stroke: rgb(245,245,245) !important;
+}
+
+.siteMapListItem a:hover > .siteMapSVG > .siteMapSvgPath {
+	stroke: rgb(35,145,255) !important;
+}
+
+.siteMapListItem:nth-of-type(5) a:hover > .siteMapSVG > .siteMapSvgPath {
+	fill: rgb(35,145,255) !important;
 }
 
 .siteMapLinkTitle {
@@ -420,9 +358,7 @@ nav {
 
 .backToTopWrap a:active > .backToTop, .backToTopWrap a:focus > .backToTop, .backToTopWrap a:hover > .backToTop {
 	background: rgb(30,145,255) !important;
-	
 }
-
 /*** END NAV *********************************************/
 
 
@@ -431,9 +367,11 @@ nav {
  HEADER
 **********************************************************/
 header {
-	background: url("../img/bg/blur1.jpg") no-repeat 50% 50%;
-	background-size: 200% auto;
-	border-bottom: 1px solid rgba(50,50,50,0.3);
+	/* background: url("../img/bg/blur1.jpg") no-repeat 50% 50%; */
+	/* background-size: 200% auto; */
+	/* background-attachment: fixed; */
+	border-bottom: 1px solid rgba(0,110,255,0.75);
+	background: rgba(35,145,255,0.75);
 	box-shadow: 0px 2px 3px rgba(50,50,50,0.5);
 	-webkit-transition: .5s ease-out;transition: .5s ease-out;
 }
@@ -476,7 +414,6 @@ header {
 	}
 }
 
-
 header h1 {
 	display: inline-block;
 	font-size: 7.5vw;
@@ -500,21 +437,28 @@ header p {
 /*********************************************************
  MAIN WRAP
 **********************************************************/
+.primeWrap {
+	position: relative;
+	min-height: 100%;
+	background: url("../img/bg/laptop.jpg") no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.outerMainWrap {
+	background: url("../img/bg/laptop.jpg") no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
 .mainWrap {
 	max-width: 1200px;
 	padding: 15px;
 	padding-bottom: 100px;
 	margin: auto;
+	
 	-webkit-transition: .5s ease-out;transition: .5s ease-out;
 }
-
-.portfolioSection {
-	
-}
-
-/* .intro {
-	margin-bottom: 25px;
-} */
 /*** END MAIN WRAP ***************************************/
 
 
@@ -590,7 +534,6 @@ MODAL NAV
 MODAL
 **********************************************************/
 .modalWrap {
-	/* display: none; */
 	position: absolute;
 	top: 0px;
 	left: 0px;
