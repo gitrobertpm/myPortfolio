@@ -1,3 +1,10 @@
+/********************************************************
+SECTIONS
+
+ DESIGNED FOR SMALL SCREENS FIRST 
+ STYLES FOR LARGER SCREENS IN RESPONSIVE.CSS 
+ *******************************************************/
+
 .portfolioSection {
 	text-align: center;
 	width: auto;
@@ -15,59 +22,61 @@
 }
 
 .psBorder {
+	background: rgb(25,25,25);
 	border-radius: 3px;
 	border: 15px solid rgb(25,25,25);
 }
 
 .psInnerWrap {
-	background: rgb(245,245,245);
+	background: -webkit-linear-gradient(black 5%, rgb(245,245,245) 10%);background: linear-gradient(black 5%, rgb(245,245,245) 10%);
 	border-radius: 3px;
 	box-shadow: 3px 3px 3px rgba(245,245,254,0.5) inset, -5px -5px 5px rgba(50,50,50,0.7) inset;
 }
 
-.psInnerWrap1 {
-	background: url("../img/bg/blur1.jpg") no-repeat 50% 50%;
-	background-size: 250% auto;
+
+
+.psTitleWrap1 {
+	background: url("../img/bg/blur1.jpg") no-repeat 50% 50%, black;
 }
 
-.psInnerWrap2 {
+.psTitleWrap2 {
 	background: url("../img/bg/myTreehouseProjBG.jpg") no-repeat 50% 50%;
-	background-size: cover;
 }
 
-.psInnerWrap3{
+.psTitleWrap3{
 	background: url("../img/bg/myProjs2.jpg") no-repeat 50% 50%;
-	background-size: cover;
 }
 
-.psInnerWrap4 {
+.psTitleWrap4 {
 	background: url("../img/bg/journey.jpg") no-repeat 50% 50%;
-	background-size: cover;
 }
 
-.psInnerWrap5 {
+.psTitleWrap5 {
 	background: url("../img/bg/process.jpg") no-repeat 50% 50%;
-	background-size: cover;
 }
 
-.psInnerWrap6 {
+.psTitleWrap6 {
 	background: url("../img/bg/blur1.jpg") no-repeat 50% 50%;
-	background-size: 250% auto;
 }
 
 .psTitleWrap {
+	height: 325px;
 	padding-top: 20px;
 	padding-bottom: 10px;
+	background-size: cover;
 	-webkit-transition: .25s ease-out;transition: .25s ease-out;
+	box-shadow: 3px 3px 3px rgba(245,245,254,0.5) inset, -5px -5px 5px rgba(50,50,50,0.7) inset;
+	border-radius: 5px 5px 0 0;
 }
 
 .psTitle {
 	font-size: 2.25em;
 	line-height: 1.1em;
 	color: rgb(245,245,245);
-	text-shadow: 1px 1px 0px rgb(50,50,50);
+	text-shadow: 2px 1px 0px rgb(50,50,50);
 	padding-left: 10px;
 	padding-right: 10px;
+	margin-bottom: 10px;
 }
 
 #meTitle {
@@ -80,7 +89,7 @@
 }
 
 .psContentWrap {
-	padding-bottom: 25px;
+	/* padding-bottom: 25px; */
 }
 
 .psImgWrap img,
@@ -100,11 +109,26 @@
 	border: 1px solid rgba(200,200,200,0.5);
 }
 
+.psImgWrap1, .psImgWrap5, .psImgWrap6 {
+	margin: 25px auto;
+}
+
 .psInfoReveal {
+	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 35px;
 	display: none;
 }
 
+.showReveal {
+	display: block;
+	height: auto;
+	width: auto;
+}
+
 .CheckItOutBtn {
+	width: 175px;
 	color: rgb(245,245,245);
 	background: rgb(255,60,0);
 }
@@ -121,3 +145,37 @@
 .psSvg:nth-of-type(1) .psSvgPath {
 	fill: rgb(245,245,245);
 }
+
+.psInfoReveal h2, .psInfoReveal h3 {
+	/* color: rgba(245,245,245,0.9); */
+	margin: 25px auto 10px;
+}
+
+.psInfoReveal p {
+	text-align: left;
+	color: rgba(45,45,45,0.9);
+	margin: 10px auto;
+}
+
+.psInfoReveal button {
+	color: rgba(245,245,245,0.9);
+	background: rgb(255,60,0);
+}
+
+.psInfoReveal button:hover {
+	color: rgb(75,175,255);
+}
+
+.smPic {
+	margin: 15px auto;
+}
+
+.lgPic {
+	display: none;
+}
+
+.psInfoReveal2 p {
+	text-align: center;
+	margin: 15px auto;
+}
+

@@ -2,8 +2,9 @@
  RESPONSIVE.CSS
 
  MEDIA QUERY STYLES FOR MEDIUM AND LARGER SCREENS
- BASE STYLES IN STYLES.CSS 
+ BASE STYLES IN STYLES.CSS  - TABLET SPECIFIC RULES AT BOTTOM OF FILE
 ********************************************************/
+
 
 /*********************************************************
  MEDIUM SCREENS
@@ -64,7 +65,7 @@
 
 	
 	/*********************************************************
-	 MAIN WRAP 500px
+	 MAIN WRAP - SECTIONS 500px
 	**********************************************************/
 	.mainWrap {
 		padding-top: 40px;
@@ -201,11 +202,23 @@
 	
 
 	/*********************************************************
-	 MAIN WRAP 750px
+	 MAIN WRAP - SECTIONS 750px
 	**********************************************************/
 	.mainWrap {
 		text-align: right;
 		/* min-height: 100%; */
+	}
+	
+	.primeWrap {
+		background: url("../img/bg/laptop.jpg") no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+
+	.outerMainWrap {
+		background: url("../img/bg/laptop.jpg") no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
 	}
 	
 	.portfolioSection {
@@ -224,13 +237,33 @@
 		
 	}
 	
+	.absoluteReveal {
+		position: absolute;
+		width: calc(100% - 50px);
+		top: 0;
+		left: 0;
+		margin-left: 25px;
+		z-index: 99;
+	}
+	
 	.psInnerWrap {
+		position: relative;
 		width: 300px;
 		height: 325px;
 	}
 	
-	.psContentWrap {
+	.showReveal {
+		height: auto;
+		width: auto;
+	}
+	
+	/* .psContentWrap {
 		vertical-align: bottom;
+	} */
+	
+	.psInfoReveal {
+		padding-left: 25px;
+		padding-right: 25px;
 	}
 	
 	
@@ -252,32 +285,32 @@
 		}
 	}
 
-	.psInnerWrap2:hover > .psContentWrap > .psImgWrap > .psSvg > .psSvgPath {
+	.psTitleWrap2:hover > .psImgWrap > .psSvg > .psSvgPath {
 		stroke-dasharray: 550;
 		stroke-dashoffset: 550;
 	}
 	
-	.psInnerWrap3:hover > .psContentWrap > .psImgWrap > .psSvg > .psSvgPath {
+	.psTitleWrap3:hover > .psImgWrap > .psSvg > .psSvgPath {
 		stroke-dasharray: 160;
 		stroke-dashoffset: 160;
 	}
 	
-	.psInnerWrap3:hover > .psContentWrap > .psImgWrap > .psSvg > .psSvgPath:nth-of-type(1)  {
+	.psTitleWrap3:hover > .psImgWrap > .psSvg > .psSvgPath:nth-of-type(1)  {
 		stroke-dasharray: 350;
 		stroke-dashoffset: 350;
 	}
 	
-	.psInnerWrap4:hover > .psContentWrap > .psImgWrap > .psSvg > .psSvgPath {
+	.psTitleWrap4:hover > .psImgWrap > .psSvg > .psSvgPath {
 		stroke-dasharray: 50;
 		stroke-dashoffset: 50;
 	}
 	
-	.psInnerWrap4:hover > .psContentWrap > .psImgWrap > .psSvg > .psSvgPath:nth-of-type(n+2),
-	.psInnerWrap4:hover > .psContentWrap > .psImgWrap > .psSvg > .theHead {
+	.psTitleWrap4:hover > .psImgWrap > .psSvg > .psSvgPath:nth-of-type(n+2),
+	.psTitleWrap4:hover > .psImgWrap > .psSvg > .theHead {
 		-webkit-transform: translate3d(60px,-37px,0px);transform: translate3d(60px,-37px,0px);
 	}
 	
-	.psInnerWrap4:hover > .psContentWrap > .psImgWrap > .psSvg > .psSvgPath:nth-of-type(1)  {
+	.psTitleWrap4:hover > .psImgWrap > .psSvg > .psSvgPath:nth-of-type(1)  {
 		stroke-dasharray: 275;
 		stroke-dashoffset: 275;
 	}
@@ -286,53 +319,46 @@
 		height: 105px;
 	}
 	
-	.psInnerWrap5:hover > .psContentWrap > .psImgWrap > .psSvg > .psSvgPath  {
+	.psTitleWrap5:hover > .psImgWrap > .psSvg > .psSvgPath  {
 		stroke-dasharray: 200;
 		stroke-dashoffset: 200;
 	}
 	
-	.psInnerWrap5:hover > .psContentWrap > .psImgWrap > .psSvg > .psSvgPath:nth-of-type(2)  {
+	.psTitleWrap5:hover > .psImgWrap > .psSvg > .psSvgPath:nth-of-type(2)  {
 		-webkit-animation-delay: .25s;animation-delay: .25s;
 	}
 	
-	.psInnerWrap5:hover > .psContentWrap > .psImgWrap > .psSvg > .psSvgPath:nth-of-type(3)  {
+	.psTitleWrap5:hover > .psImgWrap > .psSvg > .psSvgPath:nth-of-type(3)  {
 		-webkit-animation-delay: .5s;animation-delay: .5s;
 	}
 	
-	.psInnerWrap5:hover > .psContentWrap > .psImgWrap > .psSvg > .psSvgPath:nth-of-type(4)  {
+	.psTitleWrap5:hover > .psImgWrap > .psSvg > .psSvgPath:nth-of-type(4)  {
 		-webkit-animation-delay: .75s;animation-delay: .75s;
 	}
 	
-	.psInnerWrap5:hover > .psContentWrap > .psImgWrap > .psSvg > .psSvgPath:nth-of-type(5)  {
+	.psTitleWrap5:hover > .psImgWrap > .psSvg > .psSvgPath:nth-of-type(5)  {
 		-webkit-animation-delay: 1.25s;animation-delay: 1.25s;
 	}
 	
-	.psInnerWrap5:hover > .psContentWrap > .psImgWrap > .psSvg > .psSvgPath:nth-of-type(6)  {
+	.psTitleWrap5:hover > .psImgWrap > .psSvg > .psSvgPath:nth-of-type(6)  {
 		-webkit-animation-delay: 1.75s;animation-delay: 1.75s;
 	}
 	
-	.psInnerWrap5:hover > .psContentWrap > .psImgWrap > .psSvg > .psSvgPath:nth-of-type(7)  {
+	.psTitleWrap5:hover > .psImgWrap > .psSvg > .psSvgPath:nth-of-type(7)  {
 		-webkit-animation-delay: 2.25s;animation-delay: 2.25s;
 	}
 	
-	.psInnerWrap5:hover > .psContentWrap > .psImgWrap > .psSvg > .psSvgPath:nth-of-type(8)  {
+	.psTitleWrap5:hover >.psImgWrap > .psSvg > .psSvgPath:nth-of-type(8)  {
 		-webkit-animation-delay: 2.75s;animation-delay: 2.75s;
 	}
 	
-	.psInnerWrap6:hover > .psContentWrap > .psImgWrap > .psSvg > .psSvgPath {
+	.psTitleWrap6:hover > .psImgWrap > .psSvg > .psSvgPath {
 		stroke-dasharray: 235;
 		stroke-dashoffset: 235;
 	}
 
-	.psInnerWrap:hover > .psContentWrap > .psImgWrap > .psSvg > .psSvgPath {
+	.psTitleWrap:hover > .psImgWrap > .psSvg > .psSvgPath {
 		-webkit-animation: psOffset 2s ease-out forwards;animation: psOffset 2s ease-out forwards;
-	}
-	
-	.CheckItOutBtn {
-		position: absolute;
-		left: 50%;
-		margin-left: -77px;
-		bottom: 45px;
 	}
 	
 	@-webkit-keyframes psOffset {
@@ -344,6 +370,23 @@
 		100% {
 			stroke-dashoffset: 0;
 		}
+	}
+	
+	.CheckItOutBtn {
+		position: absolute;
+		left: 50%;
+		margin-left: -77px;
+		top: 270px;
+	}
+	
+	.smPic {
+		display: none;
+	}
+	
+	.lgPic {
+		display: block;
+		width: 600px;
+		margin: auto;
 	}
 	/*** END MAIN WRAP ***************************************/
 
@@ -415,16 +458,20 @@
 
 	
 	/*********************************************************
-	 MAIN WRAP
+	 MAIN WRAP - SECTIONS 1000px
 	**********************************************************/
 	.portfolioSection {
 		display: inline-block;
 		vertical-align: bottom;
-		max-width: 500px;
+		/* max-width: 500px; */
 	}
 	
 	.portfolioSection:nth-child(odd) {
 		margin-right: 75px;
+	}
+	
+	.lgPic {
+		width: auto;
 	}
 	/*** END MAIN WRAP ***************************************/
 
@@ -443,9 +490,37 @@
 /*********************************************************
  X lARGE SCREENS
 **********************************************************/
+@media screen and (min-width: 1100px) {
+	/*********************************************************
+	 MAIN WRAP - SECTIONS 1100px
+	**********************************************************/
+	.meInfoOuterWrap {
+		vertical-align: top;
+		text-align: right;
+	}
+	
+	.meInfoWrap {
+		display: inline-block;
+		text-align: center;
+		width: 475px;
+		height: 290px;
+		margin: auto;
+	}
+	
+	.meHr {
+		margin-bottom: 0px !important;
+	}
+	
+	.meProWrap {
+		float: left;
+	}
+	/*** END MAIN WRAP ***************************************/
+}
+
+
 @media screen and (min-width: 1150px) {
 	/*********************************************************
-	 MAIN WRAP
+	 MAIN WRAP - SECTIONS 1150px
 	**********************************************************/
 	.mainWrap {
 		text-align: center;
@@ -496,7 +571,7 @@
 	
 	
 	/*********************************************************
-	 HEADER 1200px
+	 HEADER 1250px
 	**********************************************************/
 	.myLogo {
 		margin-top: -10px;
@@ -526,3 +601,33 @@
 	/*** END FOOTER ******************************************/
 }
 /*** END X LARGE SCREENS **************************************/
+
+
+/*********************************************************
+ TABLET
+**********************************************************/
+@media screen and (min-height: 100px) and (max-height: 600px) and (min-width: 100px) and (max-width: 850px) {
+	.siteMapList {
+		padding-top: 0px !important;
+	}
+	
+	.siteMapList li {
+		width: 90%;
+		max-width: 75px !important;
+		height: 75px !important;
+	}
+
+	.siteMapList li a {
+		width: 100%;
+		max-width: 85px !important;
+		height: 100%;
+		box-shadow: none;
+	}
+
+
+	.siteMapList svg{
+		width: 35px !important;
+		height: 45px !important;
+	}
+}
+/*** END TABLET ******************************************/

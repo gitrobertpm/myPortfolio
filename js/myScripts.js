@@ -71,7 +71,9 @@ NAV
 					setTimeout(function(){ burgerWrap.classList.toggle("burgerWrapToggle", true); }, 750);
 					burgerWrap.classList.toggle("burgerWrapToggle", true);
 					// if (height < 850) {
-						// setTimeout(function(){ nav.style.overflow = "auto"; }, 1000);
+						// body.style.overflow = "hidden";
+						// nav.style.overflow = "auto";
+						// navBarInnerWrap.style.overflow = "auto";
 					// }
 					
 				}
@@ -91,7 +93,8 @@ NAV
 
 				burgerWrap.classList.toggle("burgerWrapToggle", false);
 				
-				nav.style.overflow = "hidden";
+				// nav.style.overflow = "hidden";
+				// navBarInnerWrap.style.overflow = "hidden";
 				
 				blerHelper(0, outerMainWrap);
 				
@@ -99,6 +102,8 @@ NAV
 				burger[0].classList.toggle("burgerTopClose", false);
 				burger[2].classList.toggle("burgerBottomClose", false);
 				
+				
+				// body.style.overflow = "auto";
 				
 				navOpen = false;
 			}
@@ -148,6 +153,67 @@ var stickyNav = function() {
 window.onscroll = function() {stickyNav()};
 window.onload = function() {stickyNav()};
 //* ========================================= *//
+
+
+
+
+
+
+//var CheckItOutBtn1 = document.getElementsByClassName("CheckItOutBtn1")[0];
+
+var CheckItOutBtn = document.getElementsByClassName("CheckItOutBtn");
+var psInfoReveal = document.getElementsByClassName("psInfoReveal");
+var closeInfo = document.getElementsByClassName("closeInfo");
+var psInnerWrap = document.getElementsByClassName("psInnerWrap");
+var portfolioSection = document.getElementsByClassName("portfolioSection");
+var psTitleWrap = document.getElementsByClassName("psTitleWrap");
+
+var infoToggle = false;
+
+
+for (var cbi = 0; cbi < CheckItOutBtn.length; cbi++) {
+	
+	CheckItOutBtn[cbi].marker = cbi;
+	
+     CheckItOutBtn[cbi].onclick = function() {
+		if (!infoToggle) {
+
+			portfolioSection[this.marker].classList.toggle("absoluteReveal", true);
+			psInfoReveal[this.marker].classList.toggle("showReveal", true);
+			psInnerWrap[this.marker].classList.toggle("showReveal", true);
+			psTitleWrap[this.marker].style.boxShadow = "0px 5px 5px rgba(50,50,50,0.5)";			
+			
+			CheckItOutBtn[this.marker].innerHTML = "Close"
+			infoToggle = true;
+			
+
+		} else {
+
+			portfolioSection[this.marker].classList.toggle("absoluteReveal", false);
+			psInfoReveal[this.marker].classList.toggle("showReveal", false);
+			psInnerWrap[this.marker].classList.toggle("showReveal", false);
+			psTitleWrap[this.marker].style.boxShadow = "none";
+
+			CheckItOutBtn[this.marker].innerHTML = "CHECK IT OUT"
+			infoToggle = false;
+
+		}
+		
+	};
+	
+	closeInfo[cbi].marker = cbi;
+	
+	closeInfo[cbi].onclick = function() {
+		portfolioSection[this.marker].classList.toggle("absoluteReveal", false);
+		psInfoReveal[this.marker].classList.toggle("showReveal", false);
+		psInnerWrap[this.marker].classList.toggle("showReveal", false);
+
+		CheckItOutBtn[this.marker].innerHTML = "CHECK IT OUT"
+		infoToggle = false;
+	};
+}
+
+
 
 
 
