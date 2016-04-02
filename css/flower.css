@@ -1,0 +1,206 @@
+/* RED FLOWER STYLING AND OPENING ANIMATIONS */
+#flowerBox {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	margin: 50px auto -75px;
+	border-radius: 50%;
+	background: rgba(255,0,0,0.3); -webkit-transform: rotateZ(360deg); transform: rotateZ(360deg); -webkit-filter: drop-shadow(0px 7px 7px rgba(0,0,0,0.5));filter: drop-shadow(0px 7px 7px rgba(0,0,0,0.5));
+}
+
+@-webkit-keyframes petalGlow {
+	0% {opacity: 0; background: transparent; box-shadow: none; -webkit-transform: rotateZ(0deg); transform: rotateZ(0deg);}
+	80% {background: transparent; box-shadow: none;}
+	90% {background: rgba(255,0,0,0.3); box-shadow: 1px 1px 2px rgb(100,175,255), 1px -1px 2px rgb(100,175,255), -1px 1px 2px rgb(100,175,255), -1px -1px 2px rgb(100,175,255);}
+	100% {opacity: 1; background: rgba(255,0,0,0.3); box-shadow: 1px 1px 2px rgb(100,175,255), 1px -1px 2px rgb(100,175,255), -1px 1px 2px rgb(100,175,255), -1px -1px 2px rgb(100,175,255); -webkit-transform: rotateZ(360deg); transform: rotateZ(360deg); -webkit-filter: drop-shadow(0px 7px 7px rgba(0,0,0,0.5));filter: drop-shadow(0px 7px 7px rgba(0,0,0,0.5));}
+}
+@keyframes petalGlow {
+	0% {opacity: 0; background: transparent; box-shadow: none; -webkit-transform: rotateZ(0deg); transform: rotateZ(0deg);}
+	80% {background: transparent; box-shadow: none;}
+	90% {background: rgba(255,0,0,0.3); box-shadow: 1px 1px 2px rgb(100,175,255), 1px -1px 2px rgb(100,175,255), -1px 1px 2px rgb(100,175,255), -1px -1px 2px rgb(100,175,255);}
+	100% {opacity: 1;background: rgba(255,0,0,0.3); box-shadow: 1px 1px 2px rgb(100,175,255), 1px -1px 2px rgb(100,175,255), -1px 1px 2px rgb(100,175,255), -1px -1px 2px rgb(100,175,255); -webkit-transform: rotateZ(360deg); transform: rotateZ(360deg); -webkit-filter: drop-shadow(0px 7px 7px rgba(0,0,0,0.5));filter: drop-shadow(0px 7px 7px rgba(0,0,0,0.5));}
+}
+
+.petal {
+	position: absolute;
+	left: 50%;
+	margin-left: -50px;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 50px;
+	border-radius: 35%;
+}
+
+#petal_1  {
+	border-color: rgba(255,0,0,0.5) transparent transparent transparent;
+}
+
+#petal_2  {
+	border-color: rgba(240,0,0,0.5) transparent transparent transparent;
+	-webkit-transform: rotate(45deg);transform: rotate(45deg);
+}
+
+/* PETAL ANIMATIONS ONLY FOR LARGER SCREENS AND CALLED IN INDEX.JS */
+@-webkit-keyframes petal_2 {
+	from {-webkit-transform: rotate(0deg);transform: rotate(0deg);opacity: 0;}
+	to {-webkit-transform: rotate(45deg);transform: rotate(45deg);opacity: 1;}
+}
+@keyframes petal_2 {
+	from {-webkit-transform: rotate(0deg);transform: rotate(0deg);opacity: 0;}
+	to {-webkit-transform: rotate(45deg);transform: rotate(45deg);opacity: 1;}
+}
+
+#petal_3  {
+	border-color: rgba(225,0,0,0.5) transparent transparent transparent;
+	-webkit-transform: rotate(90deg);transform: rotate(90deg);
+}
+
+@-webkit-keyframes petal_3 {
+	from {-webkit-transform: rotate(0deg);transform: rotate(0deg);opacity: 0;}
+	to {-webkit-transform: rotate(90deg);transform: rotate(90deg);opacity: 1;}
+}
+@keyframes petal_3 {
+	from {-webkit-transform: rotate(0deg);transform: rotate(0deg);opacity: 0;}
+	to {-webkit-transform: rotate(90deg);transform: rotate(90deg);opacity: 1;}
+}
+
+#petal_4 {
+	border-color: rgba(210,0,0,0.5) transparent transparent transparent;
+	-webkit-transform: rotate(135deg);transform: rotate(135deg);
+}
+
+@-webkit-keyframes petal_4 {
+	from {-webkit-transform: rotate(0deg);transform: rotate(0deg);opacity: 0;}
+	to {-webkit-transform: rotate(135deg);transform: rotate(135deg);opacity: 1;}
+}
+@keyframes petal_4 {
+	from {-webkit-transform: rotate(0deg);transform: rotate(0deg);opacity: 0;}
+	to {-webkit-transform: rotate(135deg);transform: rotate(135deg);opacity: 1;}
+}
+
+#petal_5  {
+	border-color: rgba(195,0,0,0.5) transparent transparent transparent;
+	-webkit-transform: rotate(180deg);transform: rotate(180deg);
+}
+
+@-webkit-keyframes petal_5 {
+	from {-webkit-transform: rotate(0deg);transform: rotate(0deg);opacity: 0;}
+	to {-webkit-transform: rotate(180deg);transform: rotate(180deg);opacity: 1;}
+}
+@keyframes petal_5 {
+	from {-webkit-transform: rotate(0deg);transform: rotate(0deg);opacity: 0;}
+	to {-webkit-transform: rotate(180deg);transform: rotate(180deg);opacity: 1;}
+}
+
+#petal_6  {
+	border-color: rgba(180,0,0,0.5) transparent transparent transparent;
+	-webkit-transform: rotate(225deg);transform: rotate(225deg);
+}
+
+@-webkit-keyframes petal_6 {
+	from {-webkit-transform: rotate(0deg);transform: rotate(0deg);opacity: 0;}
+	to {-webkit-transform: rotate(225deg);transform: rotate(225deg);opacity: 1;}
+}
+@keyframes petal_6 {
+	from {-webkit-transform: rotate(0deg);transform: rotate(0deg);opacity: 0;}
+	to {-webkit-transform: rotate(225deg);transform: rotate(225deg);opacity: 1;}
+}
+
+#petal_7  {
+	border-color: rgba(165,0,0,0.5) transparent transparent transparent;
+	-webkit-transform: rotate(270deg);transform: rotate(270deg);
+}
+
+@-webkit-keyframes petal_7 {
+	from {-webkit-transform: rotate(0deg);transform: rotate(0deg);opacity: 0;}
+	to {-webkit-transform: rotate(270deg);transform: rotate(270deg);opacity: 1;}
+}
+@keyframes petal_7 {
+	from {-webkit-transform: rotate(0deg);transform: rotate(0deg);opacity: 0;}
+	to {-webkit-transform: rotate(270deg);transform: rotate(270deg);opacity: 1;}
+}
+
+#petal_8  {
+	border-color: rgba(150,0,0,0.5) transparent transparent transparent;
+	-webkit-transform: rotate(315deg);transform: rotate(315deg);
+}
+
+@-webkit-keyframes petal_8 {
+	from {-webkit-transform: rotate(0deg);transform: rotate(0deg);opacity: 0;}
+	to {-webkit-transform: rotate(315deg);transform: rotate(315deg);opacity: 1;}
+}
+@keyframes petal_8 {
+	from {-webkit-transform: rotate(0deg);transform: rotate(0deg);opacity: 0;}
+	to {-webkit-transform: rotate(315deg);transform: rotate(315deg);opacity: 1;}
+}
+
+#flowerBulb {
+	position: absolute;
+	top: 35px;
+	left: 50%;
+	width: 25px;
+	height: 25px;
+	margin-left: -12.5px;
+	background: white;
+	border-radius: 50%;
+}
+
+#yinyang {
+	width: 25px;
+	height: 25px;
+	margin: 0;
+	background: url('../img/yinyangSm.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 1000px) {
+	#flowerBox {
+		position: relative;
+		width: 100px;
+		height: 100px;
+		margin: 50px auto -75px;
+		border-radius: 50%;
+		background: transparent;
+		box-shadow: none;
+		-webkit-transform: rotateZ(0deg); transform: rotateZ(0deg);
+		opacity: 0;
+	}
+
+	#petal_2  {
+		border-color: rgba(240,0,0,0.5) transparent transparent transparent;
+		-webkit-transform: rotate(0deg);transform: rotate(0deg);
+	}
+
+	#petal_3  {
+		border-color: rgba(225,0,0,0.5) transparent transparent transparent;
+		-webkit-transform: rotate(0deg);transform: rotate(0deg);
+	}
+
+	#petal_4 {
+		border-color: rgba(210,0,0,0.5) transparent transparent transparent;
+		-webkit-transform: rotate(0deg);transform: rotate(0deg);
+	}
+
+	#petal_5  {
+		border-color: rgba(195,0,0,0.5) transparent transparent transparent;
+		-webkit-transform: rotate(0deg);transform: rotate(0deg);
+	}
+
+	#petal_6  {
+		border-color: rgba(180,0,0,0.5) transparent transparent transparent;
+		-webkit-transform: rotate(0deg);transform: rotate(0deg);
+	}
+
+	#petal_7  {
+		border-color: rgba(165,0,0,0.5) transparent transparent transparent;
+		-webkit-transform: rotate(0deg);transform: rotate(0deg);
+	}
+
+	#petal_8  {
+		border-color: rgba(150,0,0,0.5) transparent transparent transparent;
+		-webkit-transform: rotate(0deg);transform: rotate(0deg);
+	}
+}
+/* END FLOWER ****************/

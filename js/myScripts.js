@@ -217,6 +217,92 @@ for (var cbi = 0; cbi < CheckItOutBtn.length; cbi++) {
 
 
 
+
+// FUNCTION FOR ADDING VENDOR PREFIXES TO ANIMATION PROPERTY
+var styleAnimation = function(element, value) {
+	element.style.webkitAnimation = value;
+	element.style.animation = value;
+};
+
+
+// SLIDE IN SUBHEADER IMAGES
+var codeSection = document.getElementById("codeSection");
+codeSection.addEventListener("DOMMouseScroll", flower);
+codeSection.addEventListener("mousewheel", flower);
+codeSection.addEventListener("wheel", flower);
+codeSection.addEventListener("touchstart", flower);
+
+
+function flower() {
+	// setTimeout(function(){ styleTransform(devHand, "translate(0px, 0px)"); }, 0);
+	// setTimeout(function(){ devHand.style.opacity = "1"; }, 500);
+	// setTimeout(function(){ styleTransform(desHand, "translate(0px, 0px)"); }, 0);
+	// setTimeout(function(){ desHand.style.opacity = "1"; }, 500);
+	
+	// ADD ANIMATIONS TO HEADER FLOWER FOR LARGER SCREENS
+	//if (width > 999) {
+		styleAnimation(document.getElementById("flowerBox"), "petalGlow 5s ease .5s forwards");
+		styleAnimation(document.getElementById("petal_2"), "petal_2 .5s ease .5s forwards");
+		styleAnimation(document.getElementById("petal_3"), "petal_3 1s ease .5s forwards");
+		styleAnimation(document.getElementById("petal_4"), "petal_4 1.5s ease .5s forwards");
+		styleAnimation(document.getElementById("petal_5"), "petal_5 2s ease .5s forwards");
+		styleAnimation(document.getElementById("petal_6"), "petal_6 2.5s ease .5s forwards");
+		styleAnimation(document.getElementById("petal_7"), "petal_7 3s ease .5s forwards");
+		styleAnimation(document.getElementById("petal_8"), "petal_8 3.5s ease .5s forwards");
+	//}
+};
+
+
+
+
+
+
+// FUNCTION FOR ADDING VENDOR PREFIXES TO TRANSFORM PROPERTY
+// var styleTransform = function(element, value) {
+	// element.style.msTransform = value;
+	// element.style.webkitTransform = value;
+	// element.style.transform = value;
+// };
+
+
+
+
+
+// // GOOD LIFE CODE TRANSOFRMS
+// var codeSection = document.getElementById("codeSection");
+// codeSection.addEventListener("DOMMouseScroll", codeSlide);
+// codeSection.addEventListener("mousewheel", codeSlide);
+// codeSection.addEventListener("wheel", codeSlide);
+// codeSection.addEventListener("touchstart", codeSlide);
+
+// var codeTag = document.getElementsByTagName("code");
+// var quoteDiv = document.getElementById("quoteDiv");
+
+// function codeSlide() {
+	// if (width > 999) {
+		// setTimeout(function(){ styleTransform(codeTag[0], "translate(0px, 0px)"); }, 0);
+		// setTimeout(function(){ styleTransform(codeTag[1], "translate(0px, 0px)"); }, 100);
+		// setTimeout(function(){ styleTransform(codeTag[2], "translate(0px, 0px)"); }, 200);
+		// setTimeout(function(){ styleTransform(codeTag[3], "translate(0px, 0px)"); }, 300);
+		// setTimeout(function(){ styleTransform(codeTag[4], "translate(0px, 0px)"); }, 400);
+		// setTimeout(function(){ styleTransform(codeTag[5], "translate(0px, 0px)"); }, 500);
+		// setTimeout(function(){ styleTransform(codeTag[6], "translate(0px, 0px)"); }, 600);
+		// setTimeout(function(){ styleTransform(codeTag[7], "translate(0px, 0px)"); }, 700);
+		// setTimeout(function(){ styleTransform(codeTag[8], "translate(0px, 0px)"); }, 800);
+		// setTimeout(function(){ styleTransform(codeTag[9], "translate(0px, 0px)"); }, 900);
+		// setTimeout(function(){ styleTransform(codeTag[10], "translate(0px, 0px)"); }, 1000);
+		// setTimeout(function(){ styleTransform(codeTag[11], "translate(0px, 0px)"); }, 1100);
+		// setTimeout(function(){ styleTransform(codeTag[12], "translate(0px, 0px)"); }, 1200);
+		// setTimeout(function(){ styleTransform(codeTag[13], "translate(0px, 0px)"); }, 1300);
+		// setTimeout(function(){ styleTransform(codeTag[14], "translate(0px, 0px)"); }, 1400);
+		// setTimeout(function(){ styleTransform(quoteDiv, "translate(0px, 0px)"); }, 1500);
+	// }
+// };
+
+
+
+
+
 // MODAL VARIABLES
 var modalWrap = document.getElementById("modalWrap");
 var modal = document.getElementById("modal");

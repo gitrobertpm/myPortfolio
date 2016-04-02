@@ -78,6 +78,19 @@
 		padding-left: 20px;
 	}
 	/*** END MAIN WRAP ***************************************/
+	
+	
+	
+	/* CODE FOR A HAPPY LIFE SECTION MEDIUM SCREENS ******************************/
+	.codeWrap{
+		max-width: 420px;
+	}
+
+	code {
+		font-size: 1.5em;
+		line-height: 30px;
+	}
+	/* END CODE SECTION MEDIUM SCREENS *************/
 
 
 	
@@ -216,7 +229,7 @@
 	}
 
 	.outerMainWrap {
-		background: url("../img/bg/laptop.jpg") no-repeat;
+		background: url("../img/bg/laptop2.jpg") no-repeat;
 		background-attachment: fixed;
 		background-size: cover;
 	}
@@ -391,6 +404,16 @@
 	/*** END MAIN WRAP ***************************************/
 
 	
+	
+	/* CODE FOR A HAPPY LIFE SECTION LARGE SCREENS ******************************/
+	#codeSection {
+		background: url("../img/bg/laptop2.jpg") no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+	/*** END CODE FOR A HAPPY LIFE SECTION ***************************************/
+	
+	
 
 	/*********************************************************
 	 FOOTER
@@ -474,6 +497,50 @@
 		width: auto;
 	}
 	/*** END MAIN WRAP ***************************************/
+	
+	
+	
+	/* CODE FOR A HAPPY LIFE SECTION LARGE SCREENS ******************************/
+	#codeSection h5 {
+		display: block;
+		color: white;
+	}
+	
+	#codeSection p {
+		font-size: 1.5em;
+		max-width: 700px;
+	}
+
+	/* code {
+		margin-left: 10%;
+		-webkit-transform: translate(-1000px, 0px);-ms-transform: translate(-1000px, 0px);transform: translate(-1000px, 0px);
+		-webkit-transition-duration: .5s;transition-duration: .5s;
+	} */
+
+	.oneIndent {
+		text-indent: 25px;
+	}
+
+	.twoIndents {
+		text-indent: 50px;
+	}
+
+	.threeIndents {
+		text-indent: 75px;
+	}
+	
+	/* #quoteDiv {
+		position: absolute;
+		top: 55%;
+		right: 7.5%;
+		-webkit-transform: translate(900px, 0px);-ms-transform: translate(900px, 0px);transform: translate(900px, 0px);
+		-webkit-transition-duration: .5s;transition-duration: .5s;
+	}
+	
+	#quote3 {
+		width: auto;
+	} */
+	/* END CODE SECTION LARGE SCREENS *************/
 
 	
 
@@ -525,6 +592,10 @@
 	.mainWrap {
 		text-align: center;
 		/* min-height: 100%; */
+	}
+	
+	.innerMainWrap {
+		min-height: 900px;
 	}
 	
 	.portfolioSection {
@@ -591,6 +662,37 @@
 		margin-left: 0px;
 	}
 	/*** END MODAL *********************************************/
+	
+	
+	
+	/* CODE FOR A HAPPY LIFE SECTION LARGE SCREENS ******************************/
+	#codeSection {
+		/* position: realtive; */
+		/* padding-bottom: 560px; */
+	}
+	
+	#codeSection h1 {
+		/* font-size: 7.7em; */
+	}
+
+	.codeWrap {
+		/* position: absolute;
+		left: 50%;
+		margin-left: -650px; */
+	}
+	
+	/* #quoteDiv {
+		position: absolute;
+		top: 420px;
+		left: 50%;
+		margin-left: 25px;
+		right: auto;
+	}
+	
+	#quote3 {
+		width: auto;
+	} */
+	/* END CODE SECTION LARGE SCREENS *************/
 	
 	
 	

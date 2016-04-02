@@ -450,6 +450,7 @@ header p {
 }
 
 .outerMainWrap {
+	min-height: 100%;
 	/* background: url("../img/bg/laptop.jpg") no-repeat;
 	background-attachment: fixed;
 	background-size: cover; */
@@ -458,11 +459,20 @@ header p {
 .mainWrap {
 	position: relative;
 	max-width: 1200px;
+	min-height: 100%;
 	padding: 15px;
-	padding-bottom: 100px;
+	
 	margin: auto;
 	
 	-webkit-transition: .5s ease-out;transition: .5s ease-out;
+}
+
+.innerMainWrap {
+	min-height: 1350px;
+	/* clear: both; */
+	/* background: url("../img/bg/laptop.jpg") no-repeat;
+	background-attachment: fixed;
+	background-size: cover; */
 }
 /*** END MAIN WRAP ***************************************/
 
@@ -471,7 +481,7 @@ header p {
 /*********************************************************
 MODAL NAV
 **********************************************************/
-.modalNavWrap {
+/* .modalNavWrap {
 	position: relative;
 	text-align: center;
 	width: 100%;
@@ -530,7 +540,7 @@ MODAL NAV
 	top: 10px;
 	margin-left: -20px;
 	z-index: 9999999;
-}
+} */
 /*** END MODAL NAV ***************************************/
 
 
@@ -538,7 +548,7 @@ MODAL NAV
 /*********************************************************
 MODAL
 **********************************************************/
-.modalWrap {
+/* .modalWrap {
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -602,8 +612,103 @@ MODAL
 	margin-left: 10px;
 	background: rgba(245,50,50,0.7);
 	z-index: 99999;
-}
+} */
 /*** END MODAL ***************************************/
+
+
+
+
+/* CODE FOR A HAPPY LIFE SECTION ******************************/
+#codeSection {
+	position: relative;
+	background: rgb(245,245,245);
+	text-align: center;
+	overflow: hidden;
+	clear: both;
+	margin-top: -50px;
+	padding-bottom: 150px;
+}
+
+#codeSection h1 {
+	font-size: 9vw;
+	color: rgb(100,175,255);
+	padding: 5px;
+	padding-top: 25px;
+	margin-bottom: 15px;
+	/* text-shadow: 2px 1px 0px rgb(255,60,0); */
+}
+
+#codeSection h1 span{
+	color: rgb(255,60,0);
+	/* text-shadow: 2px 1px 0px rgb(100,175,255); */
+}
+
+#codeSection p {
+	/* font-family: 'Open Sans', sans-serif; */
+	font-weight: 600;
+	color: rgb(175,15,15);
+	margin: 15px auto 10px;
+}
+
+/* #codeSection h5 {
+	display: none;
+} */
+
+/* #codeSection q span {
+	color: ivory;
+}
+
+#codeSection cite {
+	color: ivory;
+} */
+
+.codeWrap{
+	width: 100%;
+	max-width: 300px;
+	margin: 35px auto 50px;
+	padding-top: 75px;
+	padding-left: 5px;
+}
+
+code {
+	display: block;
+	font-weight: bold;
+	text-align: left;
+	line-height: 20px;
+	color: rgba(50,50,50,0.7);
+	margin: auto;
+}
+
+.italic {
+	font-style: italic;
+	font-weight: bold;
+	color: rgba(255,60,0,0.9);
+}
+
+.punc {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	color: rgba(221,44,0,0.9);
+}
+
+.string {
+	font-family: "Times New Roman", Times, serif;
+	letter-spacing: 1px;
+	color: rgb(35,145,255);
+}
+
+.oneIndent {
+	text-indent: 15px;
+}
+
+.twoIndents {
+	text-indent: 30px;
+}
+
+.threeIndents {
+	text-indent: 45px;
+}
+/* END CODE SECTION *************/
+
 
 
 
