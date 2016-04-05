@@ -160,8 +160,6 @@
 		padding-bottom: 50px !important;
 	}
 	
-	
-	
 	.siteMapList svg {
 		width: 65px;
 		height: 105px;
@@ -171,8 +169,6 @@
 		display: inline-block;
 		margin-top: -10px;
 	}
-	
-	
 	
 	.siteMapSvgPath {
 		-webkit-transition: stroke .35s ease-out !important;transition: stroke .35s ease-out !important;
@@ -219,7 +215,6 @@
 	**********************************************************/
 	.mainWrap {
 		text-align: right;
-		/* min-height: 100%; */
 	}
 	
 	.primeWrap {
@@ -236,18 +231,17 @@
 	
 	.portfolioSection {
 		position: relative;
-		display: inline-block;
+		
 		vertical-align: top;
 		margin: 45px auto 75px;
 	}
 	
-	.portfolioSection:nth-child(odd) {
-		float: left;
-		/* margin-right: 75px; */
+	.jsPortfolioSection {
+		display: inline-block;
 	}
 	
-	.portfolioSection:nth-child(even) {
-		
+	.jsPortfolioSection:nth-child(odd) {
+		float: left;
 	}
 	
 	.absoluteReveal {
@@ -256,11 +250,14 @@
 		top: 0;
 		left: 0;
 		margin-left: 25px;
-		z-index: 99;
+		z-index: 9;
 	}
 	
 	.psInnerWrap {
 		position: relative;
+	}
+	
+	.jsPsInnerWrap {
 		width: 300px;
 		height: 325px;
 	}
@@ -270,15 +267,10 @@
 		width: auto;
 	}
 	
-	/* .psContentWrap {
-		vertical-align: bottom;
-	} */
-	
 	.psInfoReveal {
 		padding-left: 25px;
 		padding-right: 25px;
 	}
-	
 	
 	.psInnerWrap1:hover > .psTitleWrap1 > #meTitle > .psSvgPath {
 		fill: transparent ;
@@ -388,7 +380,7 @@
 	.CheckItOutBtn {
 		position: absolute;
 		left: 50%;
-		margin-left: -77px;
+		margin-left: -87.5px;
 		top: 270px;
 	}
 	
@@ -406,11 +398,7 @@
 	
 	
 	/* CODE FOR A HAPPY LIFE SECTION LARGE SCREENS ******************************/
-	#codeSection {
-		background: url("../img/bg/laptop2.jpg") no-repeat;
-		background-attachment: fixed;
-		background-size: cover;
-	}
+	
 	/*** END CODE FOR A HAPPY LIFE SECTION ***************************************/
 	
 	
@@ -484,12 +472,14 @@
 	 MAIN WRAP - SECTIONS 1000px
 	**********************************************************/
 	.portfolioSection {
-		display: inline-block;
 		vertical-align: bottom;
-		/* max-width: 500px; */
 	}
 	
-	.portfolioSection:nth-child(odd) {
+	.jsPortfolioSection {
+		display: inline-block;
+	}
+	
+	.jsPortfolioSection:nth-child(odd) {
 		margin-right: 75px;
 	}
 	
@@ -508,14 +498,7 @@
 	
 	#codeSection p {
 		font-size: 1.5em;
-		max-width: 700px;
 	}
-
-	/* code {
-		margin-left: 10%;
-		-webkit-transform: translate(-1000px, 0px);-ms-transform: translate(-1000px, 0px);transform: translate(-1000px, 0px);
-		-webkit-transition-duration: .5s;transition-duration: .5s;
-	} */
 
 	.oneIndent {
 		text-indent: 25px;
@@ -528,18 +511,6 @@
 	.threeIndents {
 		text-indent: 75px;
 	}
-	
-	/* #quoteDiv {
-		position: absolute;
-		top: 55%;
-		right: 7.5%;
-		-webkit-transform: translate(900px, 0px);-ms-transform: translate(900px, 0px);transform: translate(900px, 0px);
-		-webkit-transition-duration: .5s;transition-duration: .5s;
-	}
-	
-	#quote3 {
-		width: auto;
-	} */
 	/* END CODE SECTION LARGE SCREENS *************/
 
 	
@@ -563,23 +534,28 @@
 	**********************************************************/
 	.meInfoOuterWrap {
 		vertical-align: top;
-		text-align: right;
+		/* text-align: right; */
 	}
 	
 	.meInfoWrap {
 		display: inline-block;
+		vertical-align: top;
 		text-align: center;
-		width: 475px;
-		height: 290px;
+		width: 290px;
+		/* height: 290px; */
 		margin: auto;
+		float: none;
+	}
+	.meInfoWrap:nth-of-type(2) {
+		margin: auto 35px;
 	}
 	
-	.meHr {
+	/* .meHr {
 		margin-bottom: 0px !important;
-	}
+	} */
 	
 	.meProWrap {
-		float: left;
+		/* float: left; */
 	}
 	/*** END MAIN WRAP ***************************************/
 }
@@ -587,40 +563,40 @@
 
 @media screen and (min-width: 1150px) {
 	/*********************************************************
-	 MAIN WRAP - SECTIONS 1150px
+	 MAIN WRAP - SECTIONS 1140px
 	**********************************************************/
 	.mainWrap {
 		text-align: center;
-		/* min-height: 100%; */
 	}
 	
 	.innerMainWrap {
-		min-height: 900px;
+		min-height: 1000px;
 	}
 	
-	.portfolioSection {
+	.jsPortfolioSection {
 		float: none !important;
 	}
 	
-	.portfolioSection:nth-child(odd) {
+	.jsPortfolioSection:nth-child(odd) {
 		margin-right: auto;
 	}
 	
-	.portfolioSection:nth-child(1), .portfolioSection:nth-child(4) {
+	.jsPortfolioSection:nth-child(1), .jsPortfolioSection:nth-child(4) {
 		float: left !important;
-		/* margin-left: 25px;
-		margin-right: 25px; */
+		margin-left: 25px;
+		margin-right: 10px;
 	}
 	
-	.portfolioSection:nth-child(3), .portfolioSection:nth-child(6) {
+	.jsPortfolioSection:nth-child(3), .jsPortfolioSection:nth-child(6) {
 		float: right !important;
-		/* margin-left: 25px;
-		margin-right: 25px; */
+		margin-left: 10px;
+		margin-right: 25px;
 	}
 	
-	.portfolioSection:nth-child(even) {
+	.jsPortfolioSection:nth-child(even) {
 		
 	}
+
 	/*** END MAIN WRAP ***************************************/
 }
 
@@ -666,32 +642,7 @@
 	
 	
 	/* CODE FOR A HAPPY LIFE SECTION LARGE SCREENS ******************************/
-	#codeSection {
-		/* position: realtive; */
-		/* padding-bottom: 560px; */
-	}
-	
-	#codeSection h1 {
-		/* font-size: 7.7em; */
-	}
 
-	.codeWrap {
-		/* position: absolute;
-		left: 50%;
-		margin-left: -650px; */
-	}
-	
-	/* #quoteDiv {
-		position: absolute;
-		top: 420px;
-		left: 50%;
-		margin-left: 25px;
-		right: auto;
-	}
-	
-	#quote3 {
-		width: auto;
-	} */
 	/* END CODE SECTION LARGE SCREENS *************/
 	
 	

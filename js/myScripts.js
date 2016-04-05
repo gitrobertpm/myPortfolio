@@ -6,8 +6,18 @@ SCRIPTS.JS
 var width = window.innerWidth;
 var height = window.innerHeight;
 
-// alert("test");
-// console.log("test");
+
+var portfolioSection = document.getElementsByClassName("portfolioSection");
+var psInnerWrap = document.getElementsByClassName("psInnerWrap");
+var psInfoReveal = document.getElementsByClassName("psInfoReveal");
+var flowerBox = document.getElementById("flowerBox");
+
+// NON-BLOCKING JAVASCRIPT SPECIFIC STYLES TO MAKE PAGE LOOK AND FUNCTION BETTER IF jAVASCRIPT IS ENABLED
+for (var jss = 0; jss < portfolioSection.length; jss++) {
+	psInfoReveal[jss].classList.toggle("jsPsInfoReveal", true);
+	psInnerWrap[jss].classList.toggle("jsPsInnerWrap", true);
+     portfolioSection[jss].classList.toggle("jsPortfolioSection", true);
+}
 
 
 // NAV VARIABLES
@@ -23,12 +33,9 @@ var burgerPatty = document.getElementsByClassName("burgerPatty")[0];
 var siteMapWrap = document.getElementsByClassName("siteMapWrap")[0];
 var siteMapListItem = document.getElementsByClassName("siteMapListItem");
 var backToTop = document.getElementsByClassName("backToTop");
-
 var burger = document.getElementsByClassName("burger");
-
 var siteMapSVG = document.getElementsByClassName("siteMapSVG");
 var siteMapSvgPath = document.getElementsByClassName("siteMapSvgPath");
-
 var header = document.getElementsByTagName("header")[0];
 var primeWrap = document.getElementsByClassName("primeWrap")[0];
 var outerMainWrap = document.getElementsByClassName("outerMainWrap")[0];
@@ -41,12 +48,7 @@ var navOpen = false;
 var blerHelper = function(blerTot, bler1) {
 	bler1.style.webkitFilter = "blur(" + blerTot + "px)";
 	bler1.style.filter = "blur(" + blerTot + "px)";
-	// bler2.style.webkitFilter = "blur(" + blerTot + "px)";
-	// bler2.style.filter = "blur(" + blerTot + "px)";
 };
-
-
-
 
 
 
@@ -60,51 +62,27 @@ NAV
 			if (!navOpen) {
 				navBarInnerWrap.style.height = "auto";
 				navBarList.style.display = "none";
-
 				nav.classList.toggle("openNav", true);
-				
 				if (width < 750) {	
 					setTimeout(function(){ burgerWrap.classList.toggle("burgerWrapToggle", true); }, 100);
 				} else if (width > 749) {
 					blerHelper(3, outerMainWrap);
-
 					setTimeout(function(){ burgerWrap.classList.toggle("burgerWrapToggle", true); }, 750);
 					burgerWrap.classList.toggle("burgerWrapToggle", true);
-					// if (height < 850) {
-						// body.style.overflow = "hidden";
-						// nav.style.overflow = "auto";
-						// navBarInnerWrap.style.overflow = "auto";
-					// }
-					
-				}
-				
+				}	
 				burgerPatty.style.display = "none";
 				burger[0].classList.toggle("burgerTopClose", true);
 				burger[2].classList.toggle("burgerBottomClose", true);
-				
-
 				navOpen = true;
-			} else if (navOpen) {
-				
+			} else if (navOpen) {				
 				navBarInnerWrap.style.height = "40px";
-				navBarList.style.display = "inline-block";
-				
+				navBarList.style.display = "inline-block";				
 				nav.classList.toggle("openNav", false);
-
 				burgerWrap.classList.toggle("burgerWrapToggle", false);
-				
-				// nav.style.overflow = "hidden";
-				// navBarInnerWrap.style.overflow = "hidden";
-				
-				blerHelper(0, outerMainWrap);
-				
+				blerHelper(0, outerMainWrap);				
 				burgerPatty.style.display = "block";
 				burger[0].classList.toggle("burgerTopClose", false);
 				burger[2].classList.toggle("burgerBottomClose", false);
-				
-				
-				// body.style.overflow = "auto";
-				
 				navOpen = false;
 			}
 		}
@@ -127,20 +105,6 @@ var stickyNav = function() {
 	
 	// MAKE RESPONSIVE NAV STICK ON SCROLL
 	if (distance > 1 || distance2 > 1) {
-		// if (navigator.userAgent.indexOf("Trident") > 0) {
-			// return;
-			
-		// } else if (navigator.userAgent.indexOf("Firefox") > 0) {
-			
-			// if (!navOpen) {
-				// navBar.style.top = distance + "px";
-			// }	
-		// } else if (navigator.userAgent.indexOf("Chrome") > 0) {
-			
-			// if (!navOpen) {
-				// navBar.style.top = distance2 + "px";
-			// }
-		// }
 		backToTop[0].style.background = "rgb(30,145,255)";
 		backToTop[1].style.background = "rgb(30,145,255)";
 		
@@ -159,50 +123,40 @@ window.onload = function() {stickyNav()};
 
 
 
-//var CheckItOutBtn1 = document.getElementsByClassName("CheckItOutBtn1")[0];
-
+// REVEAL PORTFOLIO INFO SECTION
 var CheckItOutBtn = document.getElementsByClassName("CheckItOutBtn");
-var psInfoReveal = document.getElementsByClassName("psInfoReveal");
 var closeInfo = document.getElementsByClassName("closeInfo");
-var psInnerWrap = document.getElementsByClassName("psInnerWrap");
-var portfolioSection = document.getElementsByClassName("portfolioSection");
 var psTitleWrap = document.getElementsByClassName("psTitleWrap");
+// portfolioSection AND psInfoReveal AND psInnerWrap VARIABLES DECLARED ABOVE
 
 var infoToggle = false;
 
-
-for (var cbi = 0; cbi < CheckItOutBtn.length; cbi++) {
-	
-	CheckItOutBtn[cbi].marker = cbi;
-	
-     CheckItOutBtn[cbi].onclick = function() {
+for (var cbi = 0; cbi < CheckItOutBtn.length; cbi++) {	
+	CheckItOutBtn[cbi].marker = cbi;	
+	CheckItOutBtn[cbi].setAttribute("id", "ciob" + CheckItOutBtn[cbi].marker);	
+     CheckItOutBtn[cbi].onclick = function() {		
+		var idee = CheckItOutBtn[this.marker].getAttribute("id");		
 		if (!infoToggle) {
-
 			portfolioSection[this.marker].classList.toggle("absoluteReveal", true);
 			psInfoReveal[this.marker].classList.toggle("showReveal", true);
 			psInnerWrap[this.marker].classList.toggle("showReveal", true);
-			psTitleWrap[this.marker].style.boxShadow = "0px 5px 5px rgba(50,50,50,0.5)";			
-			
+			psTitleWrap[this.marker].style.boxShadow = "0px 5px 5px rgba(50,50,50,0.5)";					
 			CheckItOutBtn[this.marker].innerHTML = "Close"
+			if (width < 750) {
+				window.location.assign("#" + idee);
+			}
 			infoToggle = true;
-			
-
 		} else {
-
 			portfolioSection[this.marker].classList.toggle("absoluteReveal", false);
 			psInfoReveal[this.marker].classList.toggle("showReveal", false);
 			psInnerWrap[this.marker].classList.toggle("showReveal", false);
 			psTitleWrap[this.marker].style.boxShadow = "none";
-
 			CheckItOutBtn[this.marker].innerHTML = "CHECK IT OUT"
 			infoToggle = false;
-
 		}
 		
 	};
-	
 	closeInfo[cbi].marker = cbi;
-	
 	closeInfo[cbi].onclick = function() {
 		portfolioSection[this.marker].classList.toggle("absoluteReveal", false);
 		psInfoReveal[this.marker].classList.toggle("showReveal", false);
@@ -212,10 +166,6 @@ for (var cbi = 0; cbi < CheckItOutBtn.length; cbi++) {
 		infoToggle = false;
 	};
 }
-
-
-
-
 
 
 // FUNCTION FOR ADDING VENDOR PREFIXES TO ANIMATION PROPERTY
@@ -233,23 +183,18 @@ codeSection.addEventListener("wheel", flower);
 codeSection.addEventListener("touchstart", flower);
 
 
-function flower() {
-	// setTimeout(function(){ styleTransform(devHand, "translate(0px, 0px)"); }, 0);
-	// setTimeout(function(){ devHand.style.opacity = "1"; }, 500);
-	// setTimeout(function(){ styleTransform(desHand, "translate(0px, 0px)"); }, 0);
-	// setTimeout(function(){ desHand.style.opacity = "1"; }, 500);
-	
+function flower() {	
 	// ADD ANIMATIONS TO HEADER FLOWER FOR LARGER SCREENS
-	//if (width > 999) {
-		styleAnimation(document.getElementById("flowerBox"), "petalGlow 5s ease .5s forwards");
-		styleAnimation(document.getElementById("petal_2"), "petal_2 .5s ease .5s forwards");
-		styleAnimation(document.getElementById("petal_3"), "petal_3 1s ease .5s forwards");
-		styleAnimation(document.getElementById("petal_4"), "petal_4 1.5s ease .5s forwards");
-		styleAnimation(document.getElementById("petal_5"), "petal_5 2s ease .5s forwards");
-		styleAnimation(document.getElementById("petal_6"), "petal_6 2.5s ease .5s forwards");
-		styleAnimation(document.getElementById("petal_7"), "petal_7 3s ease .5s forwards");
-		styleAnimation(document.getElementById("petal_8"), "petal_8 3.5s ease .5s forwards");
-	//}
+	if (width > 999) {
+		styleAnimation(document.getElementById("flowerBox"), "petalGlow 5s ease forwards");
+		styleAnimation(document.getElementById("petal_2"), "petal_2 .5s ease forwards");
+		styleAnimation(document.getElementById("petal_3"), "petal_3 1s ease forwards");
+		styleAnimation(document.getElementById("petal_4"), "petal_4 1.5s ease forwards");
+		styleAnimation(document.getElementById("petal_5"), "petal_5 2s ease forwards");
+		styleAnimation(document.getElementById("petal_6"), "petal_6 2.5s ease forwards");
+		styleAnimation(document.getElementById("petal_7"), "petal_7 3s ease forwards");
+		styleAnimation(document.getElementById("petal_8"), "petal_8 3.5s ease forwards");
+	}
 };
 
 

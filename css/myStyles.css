@@ -125,7 +125,7 @@ hr {
 	border-radius: 3px;
 	box-shadow: 1px 1px 2px rgba(150,150,150,0.5), -1px -1px 2px rgba(200,200,200,0.1);
 	-webkit-animation: trasnformBurger .75s ease-out .1s forwards;animation: trasnformBurger .75s ease-out .1s forwards;
-	z-index: 99999;
+	z-index: 999;
 }
 
 @-webkit-keyframes trasnformBurger {
@@ -204,7 +204,7 @@ hr {
 	top: 0;
 	width: 100%;
 	background: rgb(5,5,5);
-	z-index: 99;
+	z-index: 999999;
 }
 
 .navBarInnerWrap {
@@ -371,9 +371,6 @@ nav {
  HEADER
 **********************************************************/
 header {
-	/* background: url("../img/bg/blur1.jpg") no-repeat 50% 50%; */
-	/* background-size: 200% auto; */
-	/* background-attachment: fixed; */
 	border-bottom: 1px solid rgba(0,110,255,0.75);
 	background: rgba(35,145,255,0.75);
 	box-shadow: 0px 2px 3px rgba(50,50,50,0.5);
@@ -444,16 +441,10 @@ header p {
 .primeWrap {
 	position: relative;
 	min-height: 100%;
-	/* background: url("../img/bg/laptop.jpg") no-repeat;
-	background-attachment: fixed;
-	background-size: cover; */
 }
 
 .outerMainWrap {
 	min-height: 100%;
-	/* background: url("../img/bg/laptop.jpg") no-repeat;
-	background-attachment: fixed;
-	background-size: cover; */
 }
 
 .mainWrap {
@@ -461,169 +452,21 @@ header p {
 	max-width: 1200px;
 	min-height: 100%;
 	padding: 15px;
-	
 	margin: auto;
-	
 	-webkit-transition: .5s ease-out;transition: .5s ease-out;
 }
 
 .innerMainWrap {
-	min-height: 1350px;
-	/* clear: both; */
-	/* background: url("../img/bg/laptop.jpg") no-repeat;
-	background-attachment: fixed;
-	background-size: cover; */
+	min-height: 1420px;
 }
 /*** END MAIN WRAP ***************************************/
-
-
-
-/*********************************************************
-MODAL NAV
-**********************************************************/
-/* .modalNavWrap {
-	position: relative;
-	text-align: center;
-	width: 100%;
-	margin: auto auto 25px;
-}
-
-.arrowWrap {
-	position: absolute;
-	top: 10px;
-	width: 45px;
-	height: 45px;
-	cursor: pointer;
-	-webkit-filter: drop-shadow(1px 1px 3px rgba(0,0,0,.5));filter: drop-shadow(1px 1px 3px rgba(0,0,0,.5));
-	-webkit-transition: .5s ease-out;transition: .5s ease-out;
-}
-
-.arrowWrap:hover {
-	-webkit-filter: drop-shadow(5px 5px 5px rgba(0,0,0,.5));filter: drop-shadow(5px 5px 5px rgba(0,0,0,.5));
-}
-
-#arrowWrapLeft {
-	left: 10px;
-}
-
-#arrowWrapRight {
-	right: 10px;
-}
-
-.arrow {
-	display: block;
-	width: 35px;
-	height: 10px;
-	margin-top: 10px;
-	background: rgb(50,50,50);
-	border-radius: 5px;
-}
-
-.arrowTopLeft {
-	-webkit-transform: rotate(-45deg);transform: rotate(-45deg);
-}
-
-.arrowBottomLeft {
-	-webkit-transform: rotate(45deg);transform: rotate(45deg);
-}
-
-.arrowTopRight {
-	-webkit-transform: rotate(45deg);transform: rotate(45deg);
-}
-
-.arrowBottomRight {
-	-webkit-transform: rotate(-45deg);transform: rotate(-45deg);
-}
-
-.arrowFixed {
-	position: fixed;
-	top: 10px;
-	margin-left: -20px;
-	z-index: 9999999;
-} */
-/*** END MODAL NAV ***************************************/
-
-
-
-/*********************************************************
-MODAL
-**********************************************************/
-/* .modalWrap {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 0px;
-	height: 0px;
-	background: rgba(50,50,50,0.95);
-}
-
-.modalInnerWrap {
-	position: relative;
-}
-
-.openModal {
-	-webkit-animation: showModal 1s ease forwards;animation: showModal 1s ease forwards;
-}
-
-@-webkit-keyframes showModal {
-	0% {width: 0%; height: 0%;}
-	50% {width: 100%; height: 0%;}
-	100% {width: 100%; height: 100%;}
-}
-@keyframes showModal {
-	0% {width: 0%; height: 0%;}
-	50% {width: 100%; height: 0%;}
-	100% {width: 100%; height: 100%;}
-}
-
-.closeModal {
-	-webkit-animation: hideModal 1s ease forwards;animation: hideModal 1s ease forwards;
-}
-
-@-webkit-keyframes hideModal {
-	0% {width: 100%; height: 100%;}
-	50% {width: 100%; height: 0%;}
-	100% {width: 0%; height: 0%;}
-}
-@keyframes hideModal {
-	0% {width: 100%; height: 100%;}
-	50% {width: 100%; height: 0%;}
-	100% {width: 0%; height: 0%;}
-}
-
-.modal {
-	position: absolute;
-	left: 50%;
-	width: 95%;
-	max-width: 1200px;
-	padding: 10px;
-	margin: 15px auto 25px;
-	margin-left: -47.5%;
-	background: rgb(245,245,245);
-	border-radius: 2px;
-	border-top: 1px solid rgba(245,245,245,0.7);
-	border-bottom: 1px solid rgba(0,0,0,0.3);
-	box-shadow: 1px 1px 2px rgba(50,50,50,0.5);
-}
-
-.closeModalBtn {
-	color: rgb(245,245,245);
-	margin-top: 10px;
-	margin-left: 10px;
-	background: rgba(245,50,50,0.7);
-	z-index: 99999;
-} */
-/*** END MODAL ***************************************/
-
 
 
 
 /* CODE FOR A HAPPY LIFE SECTION ******************************/
 #codeSection {
 	position: relative;
-	background: rgb(245,245,245);
 	text-align: center;
-	overflow: hidden;
 	clear: both;
 	margin-top: -50px;
 	padding-bottom: 150px;
@@ -635,32 +478,17 @@ MODAL
 	padding: 5px;
 	padding-top: 25px;
 	margin-bottom: 15px;
-	/* text-shadow: 2px 1px 0px rgb(255,60,0); */
 }
 
 #codeSection h1 span{
 	color: rgb(255,60,0);
-	/* text-shadow: 2px 1px 0px rgb(100,175,255); */
 }
 
 #codeSection p {
-	/* font-family: 'Open Sans', sans-serif; */
 	font-weight: 600;
 	color: rgb(175,15,15);
 	margin: 15px auto 10px;
 }
-
-/* #codeSection h5 {
-	display: none;
-} */
-
-/* #codeSection q span {
-	color: ivory;
-}
-
-#codeSection cite {
-	color: ivory;
-} */
 
 .codeWrap{
 	width: 100%;

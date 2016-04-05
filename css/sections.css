@@ -33,8 +33,6 @@ SECTIONS
 	box-shadow: 3px 3px 3px rgba(245,245,254,0.5) inset, -5px -5px 5px rgba(50,50,50,0.7) inset;
 }
 
-
-
 .psTitleWrap1 {
 	background: url("../img/bg/blur1.jpg") no-repeat 50% 50%, black;
 }
@@ -81,15 +79,12 @@ SECTIONS
 
 #meTitle {
 	max-width: 100px;
+	max-height: 100px;
 	-webkit-transition: .25s ease-out;transition: .25s ease-out;
 }
 
 .psTitle4 {
 	font-size: 1.5em;
-}
-
-.psContentWrap {
-	/* padding-bottom: 25px; */
 }
 
 .psImgWrap img,
@@ -118,6 +113,9 @@ SECTIONS
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-bottom: 35px;
+}
+
+.jsPsInfoReveal {
 	display: none;
 }
 
@@ -147,7 +145,6 @@ SECTIONS
 }
 
 .psInfoReveal h2, .psInfoReveal h3 {
-	/* color: rgba(245,245,245,0.9); */
 	margin: 25px auto 10px;
 }
 
@@ -174,8 +171,43 @@ SECTIONS
 	display: none;
 }
 
+
+/* SECTION 2 - MY TREEHOUSE PROJECTS */
 .psInfoReveal2 p {
 	text-align: center;
 	margin: 15px auto;
 }
+
+.psInfoReveal2 a {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-weight: bold;
+	color: rgba(45,98,46,0.9);
+}
+
+.psInfoReveal2 a:hover {
+	color: rgb(112,172,112);
+}
+
+
+/* SECTION 6 - CONTACT */
+.psInfoReveal6 P {
+	text-align: center;
+}
+
+.contactSocialLink {
+	display: block;
+	margin: 10px auto 15px;
+}
+
+.contactSocialLink img {
+	width: 35px;
+	height: 35px;
+	-webkit-filter: invert(.7);filter: invert(.7);
+	-webkit-transition: .25s ease-out;transition: .25s ease-out;
+}
+
+.contactSocialLink img:hover {
+	-webkit-filter: invert(.3);filter: invert(.3);
+}
+
 

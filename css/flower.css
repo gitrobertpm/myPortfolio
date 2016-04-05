@@ -165,10 +165,9 @@
 		background: transparent;
 		box-shadow: none;
 		-webkit-transform: rotateZ(0deg); transform: rotateZ(0deg);
-		opacity: 0;
 	}
-
-	#petal_2  {
+	
+	/* #petal_2  {
 		border-color: rgba(240,0,0,0.5) transparent transparent transparent;
 		-webkit-transform: rotate(0deg);transform: rotate(0deg);
 	}
@@ -201,6 +200,6 @@
 	#petal_8  {
 		border-color: rgba(150,0,0,0.5) transparent transparent transparent;
 		-webkit-transform: rotate(0deg);transform: rotate(0deg);
-	}
+	} */
 }
 /* END FLOWER ****************/
