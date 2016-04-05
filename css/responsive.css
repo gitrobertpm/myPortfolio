@@ -377,6 +377,24 @@
 		}
 	}
 	
+	
+	/* SECTIONS */
+	
+	.myProjWrap {
+		display: inline-block;
+		vertical-align: top;
+		text-align: center;
+		margin: auto;
+	}
+	
+	.myProjImgWrap {
+		width: 50%;
+	}
+	
+	.myProjExpWrap {
+		width: 45%;
+	}
+	
 	.CheckItOutBtn {
 		position: absolute;
 		left: 50%;
@@ -390,9 +408,15 @@
 	
 	.lgPic {
 		display: block;
-		width: 600px;
+		width: 300px;
 		margin: auto;
 	}
+	
+	.psInnerWrap2 .lgPic {
+		width: 350px;
+	}
+	
+	
 	/*** END MAIN WRAP ***************************************/
 
 	
@@ -484,6 +508,12 @@
 	}
 	
 	.lgPic {
+		display: block;
+		width:400px;
+		margin: auto;
+	}
+	
+	.psInnerWrap2 .lgPic {
 		width: auto;
 	}
 	/*** END MAIN WRAP ***************************************/
@@ -584,12 +614,12 @@
 	.jsPortfolioSection:nth-child(1), .jsPortfolioSection:nth-child(4) {
 		float: left !important;
 		margin-left: 25px;
-		margin-right: 10px;
+		margin-right: 7px;
 	}
 	
 	.jsPortfolioSection:nth-child(3), .jsPortfolioSection:nth-child(6) {
 		float: right !important;
-		margin-left: 10px;
+		margin-left: 7px;
 		margin-right: 25px;
 	}
 	

@@ -51,6 +51,18 @@ var blerHelper = function(blerTot, bler1) {
 };
 
 
+var closeNav = function() {
+	navBarInnerWrap.style.height = "40px";
+	navBarList.style.display = "inline-block";				
+	nav.classList.toggle("openNav", false);
+	burgerWrap.classList.toggle("burgerWrapToggle", false);
+	blerHelper(0, outerMainWrap);				
+	burgerPatty.style.display = "block";
+	burger[0].classList.toggle("burgerTopClose", false);
+	burger[2].classList.toggle("burgerBottomClose", false);
+	navOpen = false;
+};
+
 
 /*===============================================
 NAV
@@ -75,15 +87,7 @@ NAV
 				burger[2].classList.toggle("burgerBottomClose", true);
 				navOpen = true;
 			} else if (navOpen) {				
-				navBarInnerWrap.style.height = "40px";
-				navBarList.style.display = "inline-block";				
-				nav.classList.toggle("openNav", false);
-				burgerWrap.classList.toggle("burgerWrapToggle", false);
-				blerHelper(0, outerMainWrap);				
-				burgerPatty.style.display = "block";
-				burger[0].classList.toggle("burgerTopClose", false);
-				burger[2].classList.toggle("burgerBottomClose", false);
-				navOpen = false;
+				closeNav();
 			}
 		}
 	};
@@ -121,9 +125,9 @@ window.onload = function() {stickyNav()};
 
 
 
-
-
-// REVEAL PORTFOLIO INFO SECTION
+/*===========================================================================
+REVEAL PORTFOLIO INFO SECTION FROM SECTION ITSELF - NAV REVEAL LOCATED BELOW
+=============================================================================*/
 var CheckItOutBtn = document.getElementsByClassName("CheckItOutBtn");
 var closeInfo = document.getElementsByClassName("closeInfo");
 var psTitleWrap = document.getElementsByClassName("psTitleWrap");
@@ -131,41 +135,102 @@ var psTitleWrap = document.getElementsByClassName("psTitleWrap");
 
 var infoToggle = false;
 
+var idee;
+var checkMark;
+
+var openDetes = function(indy) {
+	checkMark = indy;
+	portfolioSection[indy].classList.toggle("absoluteReveal", true);
+	psInfoReveal[indy].classList.toggle("showReveal", true);
+	psInnerWrap[indy].classList.toggle("showReveal", true);
+	psTitleWrap[indy].style.boxShadow = "0px 5px 5px rgba(50,50,50,0.5)";					
+	CheckItOutBtn[indy].innerHTML = "Close"
+};
+
+var closeDetes = function(indi) {
+	portfolioSection[indi].classList.toggle("absoluteReveal", false);
+	psInfoReveal[indi].classList.toggle("showReveal", false);
+	psInnerWrap[indi].classList.toggle("showReveal", false);
+	psTitleWrap[indi].style.boxShadow = "none";
+	CheckItOutBtn[indi].innerHTML = "CHECK IT OUT"
+};
+
 for (var cbi = 0; cbi < CheckItOutBtn.length; cbi++) {	
-	CheckItOutBtn[cbi].marker = cbi;	
-	CheckItOutBtn[cbi].setAttribute("id", "ciob" + CheckItOutBtn[cbi].marker);	
+	CheckItOutBtn[cbi].marker = cbi;		
      CheckItOutBtn[cbi].onclick = function() {		
-		var idee = CheckItOutBtn[this.marker].getAttribute("id");		
+		idee = portfolioSection[this.marker].getAttribute("id");		
 		if (!infoToggle) {
-			portfolioSection[this.marker].classList.toggle("absoluteReveal", true);
-			psInfoReveal[this.marker].classList.toggle("showReveal", true);
-			psInnerWrap[this.marker].classList.toggle("showReveal", true);
-			psTitleWrap[this.marker].style.boxShadow = "0px 5px 5px rgba(50,50,50,0.5)";					
-			CheckItOutBtn[this.marker].innerHTML = "Close"
-			if (width < 750) {
-				window.location.assign("#" + idee);
-			}
+			openDetes(this.marker);
+			window.location.assign("#" + idee);
 			infoToggle = true;
 		} else {
-			portfolioSection[this.marker].classList.toggle("absoluteReveal", false);
-			psInfoReveal[this.marker].classList.toggle("showReveal", false);
-			psInnerWrap[this.marker].classList.toggle("showReveal", false);
-			psTitleWrap[this.marker].style.boxShadow = "none";
-			CheckItOutBtn[this.marker].innerHTML = "CHECK IT OUT"
-			infoToggle = false;
+			if(this.marker !== checkMark) {
+				for (var clsps = 0; clsps < portfolioSection.length; clsps++) {
+					closeDetes(clsps);
+				}
+				openDetes(this.marker);
+				window.location.assign("#" + idee);
+			} else {
+				closeDetes(this.marker);
+				window.location.assign("#" + idee);
+				infoToggle = false;
+			}
 		}
 		
 	};
 	closeInfo[cbi].marker = cbi;
 	closeInfo[cbi].onclick = function() {
-		portfolioSection[this.marker].classList.toggle("absoluteReveal", false);
-		psInfoReveal[this.marker].classList.toggle("showReveal", false);
-		psInnerWrap[this.marker].classList.toggle("showReveal", false);
-
-		CheckItOutBtn[this.marker].innerHTML = "CHECK IT OUT"
+		closeDetes(this.marker);
+		window.location.assign("#" + idee);
 		infoToggle = false;
 	};
 }
+
+
+
+
+/*===========================================================================
+NAV REVEAL
+=============================================================================*/
+
+var siteMapLink = document.getElementsByClassName("siteMapLink");
+
+
+// GRAB NAV LINKS, SET HREF VALUE
+for (var navInd = 0; navInd < siteMapLink.length; navInd++) {
+	
+	siteMapLink[navInd].marker = navInd;
+	
+	var whereTo = portfolioSection[navInd].getAttribute("id");
+	
+	var goingTo = siteMapLink[navInd].setAttribute("href", "#" + whereTo);
+     
+	siteMapLink[navInd].onclick = function() {
+		for (var navInd2 = 0; navInd2 < siteMapLink.length; navInd2++) {
+			closeDetes(navInd2);
+		}
+		openDetes(this.marker);
+		closeNav();
+	};
+}
+
+// ADD ONLCICK FUNCTION, OPEN CORRESPONDING SECTION
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // FUNCTION FOR ADDING VENDOR PREFIXES TO ANIMATION PROPERTY
