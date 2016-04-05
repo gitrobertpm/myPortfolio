@@ -195,16 +195,10 @@ NAV REVEAL
 
 var siteMapLink = document.getElementsByClassName("siteMapLink");
 
-
-// GRAB NAV LINKS, SET HREF VALUE
 for (var navInd = 0; navInd < siteMapLink.length; navInd++) {
-	
 	siteMapLink[navInd].marker = navInd;
-	
 	var whereTo = portfolioSection[navInd].getAttribute("id");
-	
-	var goingTo = siteMapLink[navInd].setAttribute("href", "#" + whereTo);
-     
+	var goingTo = siteMapLink[navInd].setAttribute("href", "#" + whereTo); 
 	siteMapLink[navInd].onclick = function() {
 		for (var navInd2 = 0; navInd2 < siteMapLink.length; navInd2++) {
 			closeDetes(navInd2);
@@ -213,22 +207,6 @@ for (var navInd = 0; navInd < siteMapLink.length; navInd++) {
 		closeNav();
 	};
 }
-
-// ADD ONLCICK FUNCTION, OPEN CORRESPONDING SECTION
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -262,183 +240,6 @@ function flower() {
 	}
 };
 
-
-
-
-
-
-// FUNCTION FOR ADDING VENDOR PREFIXES TO TRANSFORM PROPERTY
-// var styleTransform = function(element, value) {
-	// element.style.msTransform = value;
-	// element.style.webkitTransform = value;
-	// element.style.transform = value;
-// };
-
-
-
-
-
-// // GOOD LIFE CODE TRANSOFRMS
-// var codeSection = document.getElementById("codeSection");
-// codeSection.addEventListener("DOMMouseScroll", codeSlide);
-// codeSection.addEventListener("mousewheel", codeSlide);
-// codeSection.addEventListener("wheel", codeSlide);
-// codeSection.addEventListener("touchstart", codeSlide);
-
-// var codeTag = document.getElementsByTagName("code");
-// var quoteDiv = document.getElementById("quoteDiv");
-
-// function codeSlide() {
-	// if (width > 999) {
-		// setTimeout(function(){ styleTransform(codeTag[0], "translate(0px, 0px)"); }, 0);
-		// setTimeout(function(){ styleTransform(codeTag[1], "translate(0px, 0px)"); }, 100);
-		// setTimeout(function(){ styleTransform(codeTag[2], "translate(0px, 0px)"); }, 200);
-		// setTimeout(function(){ styleTransform(codeTag[3], "translate(0px, 0px)"); }, 300);
-		// setTimeout(function(){ styleTransform(codeTag[4], "translate(0px, 0px)"); }, 400);
-		// setTimeout(function(){ styleTransform(codeTag[5], "translate(0px, 0px)"); }, 500);
-		// setTimeout(function(){ styleTransform(codeTag[6], "translate(0px, 0px)"); }, 600);
-		// setTimeout(function(){ styleTransform(codeTag[7], "translate(0px, 0px)"); }, 700);
-		// setTimeout(function(){ styleTransform(codeTag[8], "translate(0px, 0px)"); }, 800);
-		// setTimeout(function(){ styleTransform(codeTag[9], "translate(0px, 0px)"); }, 900);
-		// setTimeout(function(){ styleTransform(codeTag[10], "translate(0px, 0px)"); }, 1000);
-		// setTimeout(function(){ styleTransform(codeTag[11], "translate(0px, 0px)"); }, 1100);
-		// setTimeout(function(){ styleTransform(codeTag[12], "translate(0px, 0px)"); }, 1200);
-		// setTimeout(function(){ styleTransform(codeTag[13], "translate(0px, 0px)"); }, 1300);
-		// setTimeout(function(){ styleTransform(codeTag[14], "translate(0px, 0px)"); }, 1400);
-		// setTimeout(function(){ styleTransform(quoteDiv, "translate(0px, 0px)"); }, 1500);
-	// }
-// };
-
-
-
-
-
-// MODAL VARIABLES
-var modalWrap = document.getElementById("modalWrap");
-var modal = document.getElementById("modal");
-var closeModal = document.getElementById("closeModal");
-
-var myCounter;
-	
-/*==============================================
-OPEN MODAL
-===============================================*/
-
-// var openThatModal = function () {
-	
-	// for (var i = 0; i < .length; i++) {
-		
-		// [i].marker = i;
-		
-		// [i].onclick = function() {
-				
-			// modalWrap.style.display = "block";
-			// modalWrap.classList.toggle("closeModal", false);
-			// modalWrap.classList.toggle("openModal", true);
-		
-			// // MAKE LIGHTBOX OPEN IN WINDOW INSTEAD OF TOP OF DOCUMENT IN CASE OF USER SCROLL - ACOUNTS FOR CORSS-BROWSER 
-			// if (navigator.userAgent.indexOf("Firefox") > 0) {
-				// modal.style.top = document.documentElement.scrollTop + "px";
-			// } else if (navigator.userAgent.indexOf("AppleWebKit") > 0 || navigator.userAgent.indexOf("Trident") > 0) {
-				// modal.style.top = window.pageYOffset + "px";
-			// }
-
-			// [this.marker].style.display = "block";
-			// myCounter = this.marker;
-				
-		// }
-	// }
-// };
-
-// openThatModal();
-//* ========================================= *//
-
-
-/*==============================================
-CLOSE MODAL
-===============================================*/
-// var closeThatModal = function() {
-
-	// closeModal.onclick = function() {	
-			
-		// for (var i = 0; i < .length; i++) {
-			// [i].style.display = "none";
-		// }
-		
-		// modalWrap.classList.toggle("openModal", false);
-		// modalWrap.classList.toggle("closeModal", true);
-		
-		// setTimeout(function(){ modalWrap.style.display = "none"; },750);
-
-		// modalNavWrap.classList.toggle("arrowFixed", false);
-	// };
-// };
-
-// closeThatModal();
-//* ========================================= *//
-
-
-
-/*==============================================
-ARROWS
-===============================================*/
-// var arrowsAreGreat = function() {
-
-	// var arrowWrapLeft = document.getElementById("arrowWrapLeft");
-	// var arrowWrapRight = document.getElementById("arrowWrapRight");
-
-	// arrowWrapLeft.onclick = function() {
-		// if (myCounter === 0) {
-			// [0].style.display = "none";
-			// [.length-1].style.display = "block";
-			
-			// myCounter = .length-1;
-		// } else {
-			// [myCounter].style.display = "none";
-			// [myCounter - 1].style.display = "block";
-			// myCounter -= 1;
-		// }
-	// };
-
-	// arrowWrapRight.onclick = function() {
-		// if (myCounter === .length-1) {
-			// [.length-1].style.display = "none";
-			// [0].style.display = "block";
-
-			// myCounter = 0;
-		// } else {
-			// [myCounter].style.display = "none";
-			// [myCounter + 1].style.display = "block";
-			// myCounter += 1;
-		// }
-	// };
-// };
-
-// arrowsAreGreat();
-//* ========================================= *//
-
-
-
-/*===============================================
-STICKY MODAL NAV
-===============================================*/
-// var stickyNav = function() {
-	
-	// var arrowWrap = document.getElementsByClassName("arrowWrap");
-	// var modalNavWrap = document.getElementById("modalNavWrap");
-		
-	// // VARIABLES TO GET SCROLL DISTANCE FOR ALL BROWSERS
-	// var distance = document.getElementsByTagName("html")[0].scrollTop;
-	// var distance2 = document.body.scrollTop;
-	
-	// // MAKE RESPONSIVE NAV STICK ON SCROLL
-	// if (distance > 45 || distance2 > 45) {
-		// modalNavWrap.classList.toggle("arrowFixed", true);
-	// }
-// };
-
-// window.onscroll = function() {stickyNav()};
-//* ========================================= *//
 
 
 /*==============================================
