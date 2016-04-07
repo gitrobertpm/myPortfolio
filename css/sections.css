@@ -207,10 +207,6 @@ SECTIONS
 	-webkit-filter: invert(.7);filter: invert(.7);
 }
 
-/* .sourceCodeIcon:hover {
-	-webkit-filter: invert(.3);filter: invert(.3);
-} */
-
 .myProjButtonLink {
 	display: block;
 	font-family: 'Cinzel', serif;
@@ -224,11 +220,9 @@ SECTIONS
 	border-right: 2px solid rgba(50,50,50,0.5);
 	border-bottom: 2px solid rgba(50,50,50,0.5);
 	border-left: 2px solid rgba(200,200,200,0.5);
-	/* box-shadow: 3px 3px 3px rgba(50,50,50,0.7); */
 }
 
 .sourceCodeLink {
-	/* background: rgb(240,240,240); */
 	padding-top: 0px;
 	background: rgba(255,222,114,0.7);
 	color: rgba(50,50,50,0.9);
@@ -239,7 +233,6 @@ SECTIONS
 }
 
 .sourceCodeLink:hover > .sourceCodeIcon {
-	/* color: rgba(135,145,255,0.95); */
 	-webkit-filter: invert(.3);filter: invert(.3);
 }
 
@@ -251,6 +244,18 @@ SECTIONS
 	font-family: "Courier New", Courier, monospace;
 	text-align: center;
 	font-size: .88em;
+}
+
+.coinList li {
+	display: inline-block;
+	width: 75px;
+	padding-left: 0px;
+}
+
+.coinList li img {
+	display: block;
+	width: 75px;
+	padding-left: 0px;
 }
 
 
