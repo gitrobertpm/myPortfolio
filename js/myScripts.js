@@ -143,7 +143,7 @@ var openDetes = function(indy) {
 	portfolioSection[indy].classList.toggle("absoluteReveal", true);
 	psInfoReveal[indy].classList.toggle("showReveal", true);
 	psInnerWrap[indy].classList.toggle("showReveal", true);
-	psTitleWrap[indy].style.boxShadow = "0px 5px 5px rgba(50,50,50,0.5)";					
+	psTitleWrap[indy].style.boxShadow = "0px 5px 5px rgba(50,50,50,0.5), 3px 3px 3px rgba(245,245,254,0.5) inset, -5px -5px 5px rgba(50,50,50,0.7) inset";					
 	CheckItOutBtn[indy].innerHTML = "Close"
 };
 
@@ -151,7 +151,7 @@ var closeDetes = function(indi) {
 	portfolioSection[indi].classList.toggle("absoluteReveal", false);
 	psInfoReveal[indi].classList.toggle("showReveal", false);
 	psInnerWrap[indi].classList.toggle("showReveal", false);
-	psTitleWrap[indi].style.boxShadow = "none";
+	psTitleWrap[indi].style.boxShadow = "3px 3px 3px rgba(245,245,254,0.5) inset, -5px -5px 5px rgba(50,50,50,0.7) inset";
 	CheckItOutBtn[indi].innerHTML = "CHECK IT OUT"
 };
 
@@ -205,9 +205,22 @@ for (var navInd = 0; navInd < siteMapLink.length; navInd++) {
 		}
 		openDetes(this.marker);
 		closeNav();
+		infoToggle = true;
 	};
 }
 
+
+
+// ADD FUCNTIONALITY TO NAV BAR CONTACT LINK
+var navBarContactLink = document.getElementById("navBarContactLink");
+
+navBarContactLink.onclick = function() {
+	for (var navInd2 = 0; navInd2 < siteMapLink.length; navInd2++) {
+		closeDetes(navInd2);
+	}
+	openDetes(5);
+	infoToggle = true;
+};
 
 
 
