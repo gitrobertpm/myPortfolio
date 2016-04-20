@@ -10,14 +10,56 @@ var height = window.innerHeight;
 var portfolioSection = document.getElementsByClassName("portfolioSection");
 var psInnerWrap = document.getElementsByClassName("psInnerWrap");
 var psInfoReveal = document.getElementsByClassName("psInfoReveal");
+var psInfoWrap = document.getElementsByClassName("psInfoWrap");
+var myProjOuterWrap = document.getElementsByClassName("myProjOuterWrap");
+var awLeft = document.getElementsByClassName("awLeft")[0];
+var awRight = document.getElementsByClassName("awRight")[0];
 var flowerBox = document.getElementById("flowerBox");
 
 // NON-BLOCKING JAVASCRIPT SPECIFIC STYLES TO MAKE PAGE LOOK AND FUNCTION BETTER IF jAVASCRIPT IS ENABLED
 for (var jss = 0; jss < portfolioSection.length; jss++) {
-	psInfoReveal[jss].classList.toggle("jsPsInfoReveal", true);
+	psInfoWrap[jss].classList.toggle("jsPsInfoReveal", true);
 	psInnerWrap[jss].classList.toggle("jsPsInnerWrap", true);
      portfolioSection[jss].classList.toggle("jsPortfolioSection", true);
 }
+
+var projcounter;
+var projLength = myProjOuterWrap.length;
+
+for (var jtt = 0; jtt < myProjOuterWrap.length; jtt++) {
+	
+	myProjOuterWrap.marker = jtt;
+	
+	if (jtt > 0) {
+		myProjOuterWrap[jtt].style.display = "none";
+	}
+	
+	var projcounter = 0;
+}
+
+awLeft.onclick = function() {
+	if (projcounter === 0) {
+		myProjOuterWrap[0].style.display = "none";
+		myProjOuterWrap[projLength- 1].style.display = "block";
+		projcounter = projLength - 1;
+	} else {
+		myProjOuterWrap[projcounter].style.display = "none";
+		myProjOuterWrap[projcounter - 1].style.display = "block";
+		projcounter = projcounter - 1;
+	}
+};
+
+awRight.onclick = function() {
+	if (projcounter === projLength- 1) {
+		myProjOuterWrap[projLength- 1].style.display = "none";
+		myProjOuterWrap[0].style.display = "block";
+		projcounter = 0;
+	} else {
+		myProjOuterWrap[projcounter].style.display = "none";
+		myProjOuterWrap[projcounter + 1].style.display = "block";
+		projcounter = projcounter + 1;
+	}
+};
 
 
 // NAV VARIABLES
@@ -141,16 +183,20 @@ var checkMark;
 var openDetes = function(indy) {
 	checkMark = indy;
 	portfolioSection[indy].classList.toggle("absoluteReveal", true);
-	psInfoReveal[indy].classList.toggle("showReveal", true);
+	psInfoWrap[indy].classList.toggle("showReveal", true);
+	//psInfoReveal[indy].classList.toggle("hideReveal", false);
 	psInnerWrap[indy].classList.toggle("showReveal", true);
+	//psInnerWrap[indy].classList.toggle("hideReveal", false);
 	psTitleWrap[indy].style.boxShadow = "0px 5px 5px rgba(50,50,50,0.5), 3px 3px 3px rgba(245,245,254,0.5) inset, -5px -5px 5px rgba(50,50,50,0.7) inset";					
 	CheckItOutBtn[indy].innerHTML = "Close"
 };
 
 var closeDetes = function(indi) {
 	portfolioSection[indi].classList.toggle("absoluteReveal", false);
-	psInfoReveal[indi].classList.toggle("showReveal", false);
+	psInfoWrap[indi].classList.toggle("showReveal", false);
+	//psInfoReveal[indi].classList.toggle("hideReveal", true);
 	psInnerWrap[indi].classList.toggle("showReveal", false);
+	//psInnerWrap[indi].classList.toggle("hideReveal", true);
 	psTitleWrap[indi].style.boxShadow = "3px 3px 3px rgba(245,245,254,0.5) inset, -5px -5px 5px rgba(50,50,50,0.7) inset";
 	CheckItOutBtn[indi].innerHTML = "CHECK IT OUT"
 };
