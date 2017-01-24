@@ -196,7 +196,7 @@ hr {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	box-shadow: 0px 2px 3px rgba(50,50,50,0.5);
+	box-shadow: 0px 2px 3px rgba(50,50,50,0.8);
 	z-index: 99;
 }
 
@@ -373,7 +373,7 @@ nav {
 header {
 	border-bottom: 1px solid rgba(0,110,255,0.75);
 	background: rgba(35,145,255,0.75);
-	box-shadow: 0px 2px 3px rgba(50,50,50,0.5);
+	box-shadow: 0px 4px 4px rgba(50,50,50,0.7);
 	-webkit-transition: .5s ease-out;transition: .5s ease-out;
 }
 
@@ -403,6 +403,8 @@ header {
 	-webkit-transition: .25s ease-out;transition: .25s ease-out;
 	-webkit-animation: offset 2s ease-out forwards;animation: offset 2s ease-out forwards;
 }
+
+/* .cls-1{fill:none;stroke:#f5f5f5;stroke-linecap:round;stroke-linejoin:round;stroke-width:5px;} */
 
 @-webkit-keyframes offset {
 	100% {
@@ -449,7 +451,7 @@ header p {
 
 .mainWrap {
 	position: relative;
-	max-width: 1200px;
+	max-width: 1240px;
 	min-height: 100%;
 	padding: 15px;
 	margin: auto;
@@ -472,15 +474,15 @@ header p {
 	padding-bottom: 300px;
 }
 
-#codeSection h1 {
-	font-size: 9vw;
+#codeSection h2 {
+	font-size: 2rem;
 	color: rgb(100,175,255);
 	padding: 5px;
-	padding-top: 25px;
-	margin-bottom: 15px;
+	padding-top: 100px;
+	text-shadow: 1px 1px 2px rgba(50,50,50,0.7);
 }
 
-#codeSection h1 span{
+#codeSection h2 span{
 	color: rgb(255,60,0);
 }
 
@@ -493,8 +495,8 @@ header p {
 .codeWrap{
 	width: 100%;
 	max-width: 300px;
-	margin: 35px auto 50px;
-	padding-top: 75px;
+	margin: 5px auto 50px;
+	padding-top: 25px;
 	padding-left: 5px;
 }
 
@@ -534,6 +536,23 @@ code {
 
 .threeIndents {
 	text-indent: 45px;
+}
+
+#creditWrap {
+	position: absolute;
+	bottom: 250px;
+	left: 50%;
+	max-width: 200px;
+	margin-left: 150px;
+}
+
+#creditWrap p {
+	font-size: .8em;
+	color: rgba(50,50,50,0.5);
+}
+
+#creditWrap span {
+	font-style: italic;
 }
 /* END CODE SECTION *************/
 
