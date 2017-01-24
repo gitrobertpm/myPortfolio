@@ -31,7 +31,6 @@
 	
 	.siteMapWrap h2 {
 		float: none;
-		margin: none;
 		font-size: 2.25em;
 	}
 	
@@ -213,6 +212,10 @@
 	/*********************************************************
 	 MAIN WRAP - SECTIONS 750px
 	**********************************************************/
+	.outerMainWrap {
+		box-shadow: 0px 4px 4px rgba(50,50,50,0.5) inset;
+	}
+	
 	.mainWrap {
 		text-align: right;
 	}
@@ -270,13 +273,31 @@
 	.psInfoReveal {
 		padding-left: 25px;
 		padding-right: 25px;
+		box-shadow: 0px 3px 5px rgba(50,50,50,0.7) inset, -5px -5px 5px rgba(50,50,50,0.7) inset, 5px 0px 5px rgba(250,250,250,0.7) inset;
 	}
 	
 	.psInfoReveal1, .psInfoReveal6 {
-		background: url("../img/bg/laptop2.jpg") no-repeat;
+		background: -webkit-linear-gradient(bottom, rgba(35,145,255,0.5), rgba(255,173,231,0.5)), url("../img/bg/laptop2.jpg");background: linear-gradient(0deg, rgba(35,145,255,0.5), rgba(255,173,231,0.5)), url("../img/bg/laptop2.jpg");
+		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: 110% 110%;
 		background-position: 50% 50%;
+	}
+	
+	.meInfoWrap, .psInfoReveal6InnerWrap {
+		background: rgba(245,245,245,0.9);
+		border-radius: 3px;
+		padding: 15px 7px 20px;
+		box-shadow: 5px 5px 5px rgba(50, 50, 50, 0.7);
+	}
+	
+	.psInfoReveal6InnerWrap {
+		max-width: 500px;
+		margin: auto;
+	}
+	
+	.meInfoWrap p, .psInfoReveal6 p {
+		font-size: 1.25rem;
 	}
 	
 	.psInnerWrap1:hover > .psTitleWrap1 > #meTitle > .psSvgPath {
@@ -423,12 +444,11 @@
 		width: 350px;
 	}
 	
-	
 	/*** END MAIN WRAP ***************************************/
 
 	
 	
-	/* CODE FOR A HAPPY LIFE SECTION LARGE SCREENS ******************************/
+	/* CODE FOR CODE POEM LARGE SCREENS ******************************/
 	
 	/*** END CODE FOR A HAPPY LIFE SECTION ***************************************/
 	
@@ -548,15 +568,11 @@
 	.threeIndents {
 		text-indent: 75px;
 	}
-	/* END CODE SECTION LARGE SCREENS *************/
-
 	
+	#creditWrap p {
+		font-size: .8em;
+	}
 
-	/*********************************************************
-	 FOOTER
-	**********************************************************/
-
-	/*** END FOOTER ******************************************/
 }
 /*** END LARGE SCREENS ****************************************/
 
@@ -571,7 +587,6 @@
 	**********************************************************/
 	.meInfoOuterWrap {
 		vertical-align: top;
-		/* text-align: right; */
 	}
 	
 	.meInfoWrap {
@@ -579,20 +594,11 @@
 		vertical-align: top;
 		text-align: center;
 		width: 290px;
-		/* height: 290px; */
 		margin: auto;
 		float: none;
 	}
 	.meInfoWrap:nth-of-type(2) {
 		margin: auto 35px;
-	}
-	
-	/* .meHr {
-		margin-bottom: 0px !important;
-	} */
-	
-	.meProWrap {
-		/* float: left; */
 	}
 	/*** END MAIN WRAP ***************************************/
 }

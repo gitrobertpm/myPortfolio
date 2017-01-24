@@ -14,7 +14,7 @@ SECTIONS
 	border-right: 1px solid rgb(0,0,0);
 	border-left: 1px solid rgba(200,200,200,0.5);
 	border-bottom: 1px solid rgb(0,0,0);
-	box-shadow: 5px 5px 5px rgba(50,50,50,0.7);
+	box-shadow: 5px 5px 5px rgba(50,50,50,0.9);
 }
 
 .ps2 {
@@ -96,7 +96,7 @@ SECTIONS
 }
 
 .psImgWrap svg {
-	stroke: rgba(245,245,245,0.9):
+	stroke: rgba(245,245,245,0.9);
 }
 
 .psImgWrap img {
@@ -219,6 +219,7 @@ SECTIONS
 }
 
 .awRight {
+	margin-top: -10px;
 	float: right;
 	-webkit-transform: rotate(180deg);transform: rotate(180deg);
 	-webkit-filter: drop-shadow(-3px -3px 5px rgba(0,0,0,0.9));filter: drop-shadow(-3px -3px 5px rgba(0,0,0,0.9));
