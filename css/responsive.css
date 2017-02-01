@@ -72,6 +72,10 @@
 		padding-right: 35px;
 	}
 	
+	.mainHeading {
+		font-size: 1.5em;
+	}
+	
 	.psTitleWrap {
 		padding-right: 20px;
 		padding-left: 20px;
@@ -140,6 +144,10 @@
 			top: 30px;
 			right: 65px;
 		}
+	}
+	
+	.siteMapWrap h2 {
+		font-size: 2em;
 	}
 	
 	.siteMapList {
@@ -220,6 +228,10 @@
 		text-align: right;
 	}
 	
+	.mainHeading {
+		font-size: 1.75em;
+	}
+	
 	.primeWrap {
 		background: url("../img/bg/laptop.jpg") no-repeat;
 		background-attachment: fixed;
@@ -234,7 +246,6 @@
 	
 	.portfolioSection {
 		position: relative;
-		
 		vertical-align: top;
 		margin: 45px auto 75px;
 	}
@@ -291,6 +302,10 @@
 		box-shadow: 5px 5px 5px rgba(50, 50, 50, 0.7);
 	}
 	
+	.meInfoWrap {
+		margin: 25px auto;
+	}
+	
 	.psInfoReveal6InnerWrap {
 		max-width: 500px;
 		margin: auto;
@@ -298,6 +313,10 @@
 	
 	.meInfoWrap p, .psInfoReveal6 p {
 		font-size: 1.25rem;
+	}
+	
+	.meGoalsWrap  li {
+		font-size: 1.1em;
 	}
 	
 	.psInnerWrap1:hover > .psTitleWrap1 > #meTitle > .psSvgPath {
@@ -395,12 +414,20 @@
 	}
 	
 	@-webkit-keyframes psOffset {
+		10% {
+			opacity: 0;
+		}
 		100% {
+			opacity: 1;
 			stroke-dashoffset: 0;
 		}
 	}
 	@keyframes psOffset {
+		10% {
+			opacity: 0;
+		}
 		100% {
+			opacity: 1;
 			stroke-dashoffset: 0;
 		}
 	}
@@ -522,6 +549,10 @@
 	/*********************************************************
 	 MAIN WRAP - SECTIONS 1000px
 	**********************************************************/
+	.mainHeading {
+		font-size: 2.25em;
+	}
+	
 	.portfolioSection {
 		vertical-align: bottom;
 	}
@@ -597,6 +628,18 @@
 		margin: auto;
 		float: none;
 	}
+	
+	.meInfoOuterWrap {
+		position: relative;
+	}
+	
+	.meSkillsWrap {
+		position: absolute;
+		bottom: 0px;
+		left: 50%;
+		margin-left: 185px;
+	}
+	
 	.meInfoWrap:nth-of-type(2) {
 		margin: auto 35px;
 	}
